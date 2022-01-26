@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:elevation="6dp"
+    android:layout_gravity="top"
+    tools:targetApi="lollipop"
+    android:layout_alignParentBottom="true">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/bm_1"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/bm_1_img"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_main_index"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/bm_1_txt"
+            android:layout_marginTop="4dp"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@color/touch"
+            android:text="首页"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/bm_2"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/bm_2_img"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_main_video_1"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/bm_2_txt"
+            android:layout_marginTop="4dp"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@color/touch"
+            android:text="视频"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/bm_3"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/bm_3_img"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:src="@drawable/ic_main_issue"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/bm_3_txt"
+            android:layout_marginTop="4dp"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@color/touch"
+            android:text="首页"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/bm_4"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/bm_4_img"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_main_news_1"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/bm_4_txt"
+            android:layout_marginTop="4dp"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@color/touch"
+            android:text="消息"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/bm_5"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/bm_5_img"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_main_my_1"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/bm_5_txt"
+            android:layout_marginTop="4dp"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@color/touch"
+            android:text="我的"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

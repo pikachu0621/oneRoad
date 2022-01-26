@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.IndexFragment">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/f_index_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_root" />
+
+
+    <include
+        android:id="@+id/top_root"
+        layout="@layout/ui_main_top_nar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:background="@drawable/ic_main_gradient_dow"
+        android:layout_below="@id/top_root" />
+
+</RelativeLayout>
