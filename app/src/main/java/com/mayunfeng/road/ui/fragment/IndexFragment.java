@@ -72,6 +72,7 @@ public class IndexFragment extends BaseFragment<FragmentIndexBinding> {
         PagerAdapter pagerAdapter = new PagerAdapter(getChildFragmentManager(), fragments, tabs);
         binding.fIndex1.setAdapter(pagerAdapter);
         binding.topRoot.topTabLayout.setupWithViewPager(binding.fIndex1);
+        binding.fIndex1.setCurrentItem(1);
     }
 
 

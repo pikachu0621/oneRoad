@@ -3,7 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/color_0"
     tools:context=".ui.fragment.ListFragment">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
 
 
     <androidx.appcompat.widget.AppCompatImageView
@@ -11,7 +19,8 @@
         android:layout_height="120dp"
         android:src="@mipmap/f2"
         android:scaleType="centerCrop"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:visibility="gone"/>
 
     <TextView
         android:textColor="@color/touch"
@@ -20,6 +29,8 @@
         android:layout_height="wrap_content"
         android:text="@string/hello_blank_fragment"
         android:layout_gravity="center"
-        android:layout_marginTop="100dp"/>
+        android:layout_marginTop="100dp"
+        android:visibility="gone"/>
+
 
 </FrameLayout>

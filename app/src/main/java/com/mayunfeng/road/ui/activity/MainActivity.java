@@ -17,6 +17,7 @@ import com.mayunfeng.road.ui.fragment.MsgFragment;
 import com.mayunfeng.road.ui.fragment.VideoFragment;
 import com.pikachu.utils.adapter.PagerAdapter;
 import com.pikachu.utils.base.BaseActivity;
+import com.pikachu.utils.utils.GlideUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,6 +53,7 @@ public class MainActivity extends BaseBActivity<ActivityMainBinding> {
 
 
     private void bottomBindViewPager(ViewPager viewPager) {
+
 
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override

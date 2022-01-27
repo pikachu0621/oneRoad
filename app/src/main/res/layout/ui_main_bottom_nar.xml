@@ -9,6 +9,7 @@
     android:elevation="6dp"
     android:layout_gravity="top"
     tools:targetApi="lollipop"
+    android:background="@color/white"
     android:layout_alignParentBottom="true">
 
 

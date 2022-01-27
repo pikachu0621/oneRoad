@@ -1,5 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="17 (2)" project-jdk-type="JavaSDK" />
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/gradient_dow.xml" value="0.35" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/ic_main_add_user.xml" value="0.35" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/ic_main_index.xml" value="0.35" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/ic_main_index_1.xml" value="0.35" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/ic_main_issue.xml" value="0.35" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/ic_main_item_good.xml" value="0.35" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/ic_main_item_many.xml" value="0.35" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/ic_main_item_msg.xml" value="0.35" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/ic_main_item_share.xml" value="0.35" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/ic_main_my.xml" value="0.35" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/ic_main_my_1.xml" value="0.35" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/ic_main_news.xml" value="0.35" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/ic_main_news_1.xml" value="0.35" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/ic_main_video.xml" value="0.35" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/ic_main_video_1.xml" value="0.35" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/ic_mian_search_bg.xml" value="0.35" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/layout-v28/ui_main_item_img1.xml" value="0.317481884057971" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/layout/fragment_index.xml" value="0.3338541666666667" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/layout/fragment_list.xml" value="0.3220108695652174" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/layout/fragment_me.xml" value="0.3338541666666667" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/layout/fragment_msg.xml" value="0.3338541666666667" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/layout/fragment_video.xml" value="0.3338541666666667" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/layout/ui_bottom_nar.xml" value="0.3338541666666667" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/layout/ui_main_bottom_nar.xml" value="0.5" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/layout/ui_main_item_big_img.xml" value="0.317481884057971" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/layout/ui_main_item_big_video.xml" value="0.317481884057971" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/layout/ui_main_item_gift.xml" value="0.317481884057971" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/layout/ui_main_item_img1.xml" value="0.48748841519925856" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/layout/ui_main_item_img3.xml" value="0.4" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/layout/ui_main_item_t1.xml" value="0.317481884057971" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/layout/ui_main_item_video.xml" value="0.317481884057971" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/layout/ui_main_top_nar.xml" value="0.3338541666666667" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
 </project>
