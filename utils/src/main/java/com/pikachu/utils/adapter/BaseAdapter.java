@@ -63,6 +63,16 @@ public abstract class BaseAdapter<T> extends RecyclerView.Adapter<BaseAdapter.Vi
 
 
 
+    @Override
+    public int getItemViewType(int position) {
+        return getItemViewType(position, data.get(position));
+    }
+
+    public int getItemViewType(int position, T itemData){
+        return 0;
+    }
+
+
     public BaseAdapter(List<T> data) {
         if (data == null){
             this.data = new ArrayList<>();

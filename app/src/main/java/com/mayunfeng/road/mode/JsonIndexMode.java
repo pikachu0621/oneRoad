@@ -58,7 +58,7 @@ public class JsonIndexMode implements Serializable {
     }
 
     public static class ContentDTO implements Serializable {  // 内容Json  适配于首页，视频 全部数据
-        private int type; // 类型 同上面的类型
+        private int type; // 类型 同上面的类型     -6 ~ -1
         private int userId; // 用户id
         private String userName; // 用户昵称
         private int userGrade; // 用户等级

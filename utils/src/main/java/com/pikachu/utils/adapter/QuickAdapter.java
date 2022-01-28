@@ -50,9 +50,7 @@ public abstract class QuickAdapter<V extends ViewBinding, T > extends BaseAdapte
 
     // 解决复用数据 position 错乱问题
     @Override
-    public int getItemViewType(int position) {
+    public int getItemViewType(int position, T itemData) {
         return position;
     }
-
-
 }

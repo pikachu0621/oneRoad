@@ -1,7 +1,178 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <!--视频 item-->
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    android:layout_marginVertical="4dp"
+    android:background="@color/white">
+    <!--一张图片的文章 item-->
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/u_top_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center_vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img3_4"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/user_img" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_marginStart="5dp"
+            android:id="@+id/img3_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="@string/app_name"
+            android:textColor="@color/color_5"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:layout_weight="1"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/img3_6"
+            android:layout_width="50dp"
+            android:background="@drawable/ic_main_add_user"
+            android:layout_height="22dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="@string/main_s1"
+            android:gravity="center"
+            android:textColor="@color/color_5"
+            android:textSize="11sp" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/img3_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="@string/test"
+        android:textColor="@color/color_4"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/u_top_root"
+        app:lineHeight="20dp" />
+
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_marginTop="10dp"
+        android:id="@+id/u_img3_root"
+        app:layout_constraintTop_toBottomOf="@+id/img3_1"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/user_img"
+        android:layout_weight="1"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#30000000"
+        app:layout_constraintBottom_toBottomOf="@+id/u_img3_root"
+        app:layout_constraintEnd_toEndOf="@+id/u_img3_root"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/u_img3_root" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_main_item_video_pay"
+        app:layout_constraintBottom_toBottomOf="@+id/u_img3_root"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/u_img3_root"
+        app:layout_constraintTop_toTopOf="@+id/u_img3_root" />
+
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_marginTop="10dp"
+        android:id="@+id/linearLayoutCompat2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/u_img3_root">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            app:srcCompat="@drawable/ic_main_item_share" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/img3_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="100"
+            android:textColor="@color/color_5"
+            android:textSize="10sp" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="20dp"
+            app:srcCompat="@drawable/ic_main_item_msg" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/img3_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="100"
+            android:textColor="@color/color_5"
+            android:textSize="10sp" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="20dp"
+            app:srcCompat="@drawable/ic_main_item_good" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/img3_9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:text="100"
+            android:textColor="@color/color_5"
+            android:textSize="10sp" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img3_10"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            app:srcCompat="@drawable/ic_main_item_many" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

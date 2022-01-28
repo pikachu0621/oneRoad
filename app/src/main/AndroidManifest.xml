@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.mayunfeng.road">
+    <uses-permission android:name="android.permission.INTERNET" />
+
 
     <application
         android:name=".Application"
@@ -10,7 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.一带一路"
-        android:fullBackupContent="@xml/backup_descriptor">
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:usesCleartextTraffic="true"
+        android:fullBackupContent="@xml/backup_descriptor"
+        tools:targetApi="n">
         <activity
             android:name=".ui.activity.MainActivity"
             android:exported="true">
