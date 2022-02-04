@@ -76,4 +76,13 @@ dependencies {
 
     //gson
     implementation 'com.google.code.gson:gson:2.8.6'
+
+    //下拉刷新
+    implementation  'com.scwang.smart:refresh-layout-kernel:2.0.1'
+    implementation  'com.scwang.smart:refresh-header-material:2.0.1'
+    implementation  'com.scwang.smart:refresh-header-classics:2.0.1'
+
+
+    // 动画
+    implementation 'com.airbnb.android:lottie:4.2.2'
 }

@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import com.google.gson.Gson;
 import com.mayunfeng.road.R;
 import com.mayunfeng.road.adapter.MainMixAdapter;
+import com.mayunfeng.road.adapter.OnMainMixItemClickListener;
 import com.mayunfeng.road.databinding.FragmentIndexBinding;
 import com.mayunfeng.road.databinding.FragmentListBinding;
 import com.mayunfeng.road.mode.JsonIndexMode;
@@ -27,7 +28,7 @@ import java.util.List;
  * Use the {@link ListFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ListFragment extends BaseFragment<FragmentListBinding> {
+public class ListFragment extends BaseFragment<FragmentListBinding> implements OnMainMixItemClickListener<JsonIndexMode.ContentDTO> {
 
     private JsonIndexMode.TitleDTO bundle;
 
@@ -62,7 +63,7 @@ public class ListFragment extends BaseFragment<FragmentListBinding> {
         //showLog(s);
         JsonIndexMode jsonIndexMode = new Gson().fromJson(s, JsonIndexMode.class);
 
-        binding.list2.setAdapter(new MainMixAdapter(jsonIndexMode.getContent()));
+        binding.list2.setAdapter(new MainMixAdapter(jsonIndexMode.getContent(), this));
         binding.list2.setLayoutManager(new LinearLayoutManager(context));
 
 
@@ -72,7 +73,11 @@ public class ListFragment extends BaseFragment<FragmentListBinding> {
     @Override
     protected void lazyLoad() {
 
+    }
 
 
+    @Override
+    public boolean onClickItem(JsonIndexMode.ContentDTO itemData) {
+        return false;
     }
 }

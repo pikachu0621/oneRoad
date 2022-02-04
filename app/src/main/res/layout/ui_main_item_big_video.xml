@@ -45,7 +45,7 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/img3_6"
             android:layout_width="50dp"
-            android:background="@drawable/ic_main_add_user"
+            android:background="@drawable/dw_main_add_user"
             android:layout_height="22dp"
             android:ellipsize="end"
             android:lines="1"
@@ -92,7 +92,7 @@
         android:background="#30000000"
         app:layout_constraintBottom_toBottomOf="@+id/u_img3_root"
         app:layout_constraintEnd_toEndOf="@+id/u_img3_root"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/u_img3_root"
         app:layout_constraintTop_toTopOf="@+id/u_img3_root" />
 
     <androidx.appcompat.widget.AppCompatImageView

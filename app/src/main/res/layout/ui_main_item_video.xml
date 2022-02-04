@@ -20,13 +20,19 @@
         app:layout_constraintTop_toTopOf="parent"
         android:gravity="center_vertical">
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/img3_4"
+
+        <com.pikachu.utils.view.QMUIShadowView
             android:layout_width="26dp"
             android:layout_height="26dp"
-            android:scaleType="centerCrop"
-            android:src="@mipmap/user_img" />
-
+            app:qmui_shadowColor="@android:color/transparent"
+            app:qmui_radius="13dp">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img3_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/user_img" />
+        </com.pikachu.utils.view.QMUIShadowView>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_marginStart="5dp"
@@ -45,7 +51,7 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/img3_6"
             android:layout_width="50dp"
-            android:background="@drawable/ic_main_add_user"
+            android:background="@drawable/dw_main_add_user"
             android:layout_height="22dp"
             android:ellipsize="end"
             android:lines="1"
@@ -76,34 +82,46 @@
 
 
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_marginTop="10dp"
-        android:id="@+id/u_img3_root"
-        app:layout_constraintTop_toBottomOf="@+id/img3_1"
+
+
+
+    <com.pikachu.utils.view.QMUIShadowView
+        android:id="@+id/shadow_root"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:scaleType="centerCrop"
-        android:src="@mipmap/user_img"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="2dp"
+        app:qmui_shadowColor="@android:color/transparent"
+        app:qmui_radius="@dimen/img_radius"
+        app:layout_constraintTop_toBottomOf="@+id/img3_1">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/u_img3_root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/user_img"/>
+    </com.pikachu.utils.view.QMUIShadowView>
+
 
     <View
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="#30000000"
-        app:layout_constraintBottom_toBottomOf="@+id/u_img3_root"
-        app:layout_constraintEnd_toEndOf="@+id/u_img3_root"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/u_img3_root" />
+        android:background="@drawable/dw_video_mask"
+        app:layout_constraintBottom_toBottomOf="@+id/shadow_root"
+        app:layout_constraintEnd_toEndOf="@+id/shadow_root"
+        app:layout_constraintStart_toStartOf="@+id/shadow_root"
+        app:layout_constraintTop_toTopOf="@+id/shadow_root" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/appCompatImageView"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:src="@drawable/ic_main_item_video_pay"
-        app:layout_constraintBottom_toBottomOf="@+id/u_img3_root"
+        app:layout_constraintBottom_toBottomOf="@+id/shadow_root"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/u_img3_root"
-        app:layout_constraintTop_toTopOf="@+id/u_img3_root" />
+        app:layout_constraintStart_toStartOf="@+id/shadow_root"
+        app:layout_constraintTop_toTopOf="@+id/shadow_root" />
 
 
 
@@ -115,7 +133,7 @@
         android:gravity="center_vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/u_img3_root">
+        app:layout_constraintTop_toBottomOf="@+id/shadow_root">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="16dp"

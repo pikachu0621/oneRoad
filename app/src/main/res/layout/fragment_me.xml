@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.fragment.MeFragment">
 
     <androidx.appcompat.widget.AppCompatImageView
@@ -11,5 +12,15 @@
         android:src="@mipmap/f2"
         android:scaleType="centerCrop"
         android:layout_gravity="center"/>
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/t16_0"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="f30.json"
+        app:lottie_loop="true"
+        app:lottie_speed="1.3"/>
 
 </FrameLayout>

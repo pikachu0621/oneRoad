@@ -33,7 +33,7 @@
             android:layout_height="36dp"
             android:layout_marginHorizontal="20dp"
             android:layout_weight="1"
-            android:background="@drawable/ic_main_search_bg"
+            android:background="@drawable/dw_main_search_bg"
             android:gravity="center_vertical"
             android:paddingHorizontal="14dp">
 

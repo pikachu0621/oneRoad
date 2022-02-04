@@ -1,5 +1,7 @@
 package com.mayunfeng.road.adapter;
 
+import android.annotation.SuppressLint;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.viewbinding.ViewBinding;
@@ -27,11 +29,18 @@ import java.util.List;
  */
 public class MainMixAdapter extends BaseAdapter<JsonIndexMode.ContentDTO> {
 
-    public static final int IMG_1 = -1, IMG_3 = -2, VIDEO = -3, BIG_IMG = -4, BIG_VIDEO = -5, TODAY = -6;
+    public static final int IMG_1 = -1, // 一张图片样式
+            IMG_3 = -2, // 3张图片样式
+            VIDEO = -3, // 频样式
+            BIG_IMG = -4, // 全视频样式
+            BIG_VIDEO = -5, // 全图片样式
+            TODAY = -6; // 每日必看
+    private final OnMainMixItemClickListener<JsonIndexMode.ContentDTO> onMainMixItemClickListener;
 
 
-    public MainMixAdapter(List<JsonIndexMode.ContentDTO> data) {
+    public MainMixAdapter(List<JsonIndexMode.ContentDTO> data, OnMainMixItemClickListener<JsonIndexMode.ContentDTO> onMainMixItemClickListener ) {
         super(data);
+        this.onMainMixItemClickListener = onMainMixItemClickListener;
     }
 
     @Override
@@ -51,6 +60,7 @@ public class MainMixAdapter extends BaseAdapter<JsonIndexMode.ContentDTO> {
         return UiMainItemImg1Binding.class;
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindView(ViewBinding binding, JsonIndexMode.ContentDTO itemData, int position, int itemViewType, List<JsonIndexMode.ContentDTO> data) {
 
@@ -60,26 +70,37 @@ public class MainMixAdapter extends BaseAdapter<JsonIndexMode.ContentDTO> {
 
         if (itemViewType == IMG_1){
             UiMainItemImg1Binding bind = (UiMainItemImg1Binding) binding;
-            bind.img15.setText(itemData.getUserName());
-            bind.img11.setText(itemData.getArticleTitle());
-            bind.img12.setText(itemData.getArticleContent());
 
-            JsonIndexMode.ContentDTO.DataSourceDTO dataSourceDTO = itemData.getDataSource().get(0);
-            GlideUtils.with(context).load(dataSourceDTO.getUrl()).transition(200).rounded(20).into(bind.img13);
+            GlideUtils.with(context).load(itemData.getUserImage()).transition(200).into(bind.img14); // 用户头像
+            bind.img15.setText(itemData.getUserName()); // 用户昵称
+            bind.img11.setText(itemData.getArticleTitle()); // 文章标题
+            bind.img12.setText(itemData.getArticleContent()); // 文章内容
+
+            bind.img17.setText(itemData.getArticleShareNum() + ""); // 分享数
+            bind.img18.setText(itemData.getArticleCommentNum() + ""); //  评论数
+            bind.img19.setText(itemData.getArticleLaudNum() + ""); // 点赞数
+
+            JsonIndexMode.ContentDTO.DataSourceDTO dataSourceDTO = itemData.getDataSource().get(0); // 获取图片组
+            GlideUtils.with(context).load(dataSourceDTO.getUrl()).transition(200).into(bind.img13); // 加载图片
             return;
         }
 
         if (itemViewType == IMG_3){
             UiMainItemImg3Binding bind = (UiMainItemImg3Binding) binding;
+
+            GlideUtils.with(context).load(itemData.getUserImage()).transition(200).into(bind.img34); // 用户头像
             bind.img35.setText(itemData.getUserName());
             bind.img31.setText(itemData.getArticleTitle());
             bind.img32.setText(itemData.getArticleContent());
 
-            List<JsonIndexMode.ContentDTO.DataSourceDTO> dataSource = itemData.getDataSource();
-            GlideUtils.with(context).load(dataSource.get(0).getUrl()).transition(200).rounded(20).into(bind.img3Root1);
-            GlideUtils.with(context).load(dataSource.get(1).getUrl()).transition(200).rounded(20).into(bind.img3Root2);
-            GlideUtils.with(context).load(dataSource.get(2).getUrl()).transition(200).rounded(20).into(bind.img3Root3);
+            bind.img37.setText(itemData.getArticleShareNum() + ""); // 分享数
+            bind.img38.setText(itemData.getArticleCommentNum() + ""); //  评论数
+            bind.img39.setText(itemData.getArticleLaudNum() + ""); // 点赞数
 
+            List<JsonIndexMode.ContentDTO.DataSourceDTO> dataSource = itemData.getDataSource();
+            GlideUtils.with(context).load(dataSource.get(0).getUrl()).transition(200).into(bind.img3Root1);
+            GlideUtils.with(context).load(dataSource.get(1).getUrl()).transition(200).into(bind.img3Root2);
+            GlideUtils.with(context).load(dataSource.get(2).getUrl()).transition(200).into(bind.img3Root3);
 
             return;
         }
@@ -87,12 +108,16 @@ public class MainMixAdapter extends BaseAdapter<JsonIndexMode.ContentDTO> {
         if (itemViewType == VIDEO){
             UiMainItemVideoBinding bind = (UiMainItemVideoBinding) binding;
 
+            GlideUtils.with(context).load(itemData.getUserImage()).transition(200).into(bind.img34); // 用户头像
             bind.img35.setText(itemData.getUserName());
             bind.img31.setText(itemData.getArticleTitle());
 
-            JsonIndexMode.ContentDTO.DataSourceDTO dataSourceDTO = itemData.getDataSource().get(0);
-            GlideUtils.with(context).load(dataSourceDTO.getUrl()).transition(200).rounded(20).into(bind.uImg3Root);
+            bind.img37.setText(itemData.getArticleShareNum() + ""); // 分享数
+            bind.img38.setText(itemData.getArticleCommentNum() + ""); //  评论数
+            bind.img39.setText(itemData.getArticleLaudNum() + ""); // 点赞数
 
+            JsonIndexMode.ContentDTO.DataSourceDTO dataSourceDTO = itemData.getDataSource().get(0);
+            GlideUtils.with(context).load(dataSourceDTO.getUrl()).transition(200).into(bind.uImg3Root);
 
             return;
         }
@@ -122,6 +147,14 @@ public class MainMixAdapter extends BaseAdapter<JsonIndexMode.ContentDTO> {
         }
 
 
+        // 列表点击
+        binding.getRoot().setOnClickListener(v -> {
+
+            if (onMainMixItemClickListener.onClickItem(itemData)) {
+                refresh();
+            }
+
+        });
     }
 
 

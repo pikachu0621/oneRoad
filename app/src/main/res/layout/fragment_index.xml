@@ -19,7 +19,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="16dp"
-        android:background="@drawable/ic_main_gradient_dow"
+        android:background="@drawable/dw_main_gradient_dow"
         android:layout_below="@id/top_root" />
 
 </RelativeLayout>

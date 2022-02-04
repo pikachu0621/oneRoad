@@ -62,12 +62,18 @@ public class JsonIndexMode implements Serializable {
         private int userId; // 用户id
         private String userName; // 用户昵称
         private int userGrade; // 用户等级
+        private String userImage; // 用户头像
         private int articleId; // 文章id
         private String articleTitle; // 文章标题
         private String articleContent; // 文章内容 文字
+        private long articleOutTime; // 帖子发布时间
+        private int articleShareNum; // 分享数
         private int articleCommentNum; //  评论数
         private int articleLaudNum; // 点赞数
+        private boolean isFollow; // 是否关注了此作者
+        private boolean  isLaud; // 是否给此篇文章点赞
         private List<DataSourceDTO> dataSource; // 数据源
+
 
         public int getType() {
             return type;
@@ -101,6 +107,14 @@ public class JsonIndexMode implements Serializable {
             this.userGrade = userGrade;
         }
 
+        public String getUserImage() {
+            return userImage;
+        }
+
+        public void setUserImage(String userImage) {
+            this.userImage = userImage;
+        }
+
         public int getArticleId() {
             return articleId;
         }
@@ -125,6 +139,22 @@ public class JsonIndexMode implements Serializable {
             this.articleContent = articleContent;
         }
 
+        public long getArticleOutTime() {
+            return articleOutTime;
+        }
+
+        public void setArticleOutTime(long articleOutTime) {
+            this.articleOutTime = articleOutTime;
+        }
+
+        public int getArticleShareNum() {
+            return articleShareNum;
+        }
+
+        public void setArticleShareNum(int articleShareNum) {
+            this.articleShareNum = articleShareNum;
+        }
+
         public int getArticleCommentNum() {
             return articleCommentNum;
         }
@@ -139,6 +169,22 @@ public class JsonIndexMode implements Serializable {
 
         public void setArticleLaudNum(int articleLaudNum) {
             this.articleLaudNum = articleLaudNum;
+        }
+
+        public boolean isFollow() {
+            return isFollow;
+        }
+
+        public void setFollow(boolean follow) {
+            isFollow = follow;
+        }
+
+        public boolean isLaud() {
+            return isLaud;
+        }
+
+        public void setLaud(boolean laud) {
+            isLaud = laud;
         }
 
         public List<DataSourceDTO> getDataSource() {
