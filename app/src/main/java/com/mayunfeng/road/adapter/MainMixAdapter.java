@@ -140,15 +140,10 @@ public class MainMixAdapter extends BaseAdapter<JsonIndexMode.ContentDTO> {
             bind.bImg2.setText(itemData.getArticleLaudNum() + "");
             bind.bImg3.setText(itemData.getArticleCommentNum() + "");
 
-
-
             JsonIndexMode.ContentDTO.DataSourceDTO dataSourceDTO = itemData.getDataSource().get(0);
-
-            LogsUtils.showLog("TEST_TT", dataSourceDTO.getPxh());
             ViewGroup.LayoutParams params =  bind.bImg0.getLayoutParams();
             params.height = UiUtils.dp2px(context, dataSourceDTO.getPxh());
             bind.bImg0.setLayoutParams(params);
-
             GlideUtils.with(context).load(dataSourceDTO.getUrl()).into(bind.bImg0);
 
             return;
