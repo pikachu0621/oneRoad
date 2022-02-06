@@ -13,6 +13,7 @@ import com.google.gson.Gson;
 import com.mayunfeng.road.R;
 import com.mayunfeng.road.databinding.FragmentIndexBinding;
 import com.mayunfeng.road.mode.JsonIndexMode;
+import com.mayunfeng.road.mode.JsonTabMode;
 import com.pikachu.utils.adapter.PagerAdapter;
 import com.pikachu.utils.base.BaseFragment;
 import com.pikachu.utils.utils.AssetsUtils;
@@ -48,24 +49,24 @@ public class IndexFragment extends BaseFragment<FragmentIndexBinding> {
 
     @Override
     protected void lazyLoad() {
-        String s = AssetsUtils.readAssetsString(context, "index/loadIndex.json");
+        // 加载Tab标题
+        String s = AssetsUtils.readAssetsString(context, "index/loadTab.json");
         //showLog(s);
-
-        JsonIndexMode jsonIndexMode = new Gson().fromJson(s, JsonIndexMode.class);
-        loadTabAndFragment(jsonIndexMode);
+        JsonTabMode jsonTabMode = new Gson().fromJson(s, JsonTabMode.class);
+        loadTabAndFragment(jsonTabMode);
     }
 
 
 
-    private void loadTabAndFragment(JsonIndexMode jsonIndexMode){
-        List<JsonIndexMode.TitleDTO> title = jsonIndexMode.getTitle();
+    private void loadTabAndFragment(JsonTabMode jsonIndexMode){
+        List<JsonTabMode.TitleDTO> title = jsonIndexMode.getTitle();
         if (title == null || title.size() <= 0){
             return;
         }
 
         List<String> tabs = new ArrayList<>();
         List<Fragment> fragments = new ArrayList<>();
-        for (JsonIndexMode.TitleDTO titleDTO : title) {
+        for (JsonTabMode.TitleDTO titleDTO : title) {
             tabs.add(titleDTO.getTitle());
             fragments.add(ListFragment.newInstance(titleDTO));
         }

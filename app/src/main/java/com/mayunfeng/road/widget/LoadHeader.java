@@ -1,17 +1,21 @@
 package com.mayunfeng.road.widget;
 
+import android.animation.Animator;
 import android.content.Context;
+import android.os.Handler;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.mayunfeng.road.R;
 import com.mayunfeng.road.databinding.UiLoadHeaderBinding;
+import com.pikachu.utils.utils.UiUtils;
 import com.scwang.smart.refresh.layout.api.RefreshHeader;
 import com.scwang.smart.refresh.layout.api.RefreshKernel;
 import com.scwang.smart.refresh.layout.api.RefreshLayout;
@@ -24,10 +28,10 @@ import com.scwang.smart.refresh.layout.constant.SpinnerStyle;
  * @Author: pkpk.run
  * @Description: null
  */
-public class LoadHeader extends LinearLayout implements RefreshHeader {
+public class LoadHeader extends RelativeLayout implements RefreshHeader {
 
 
-    private UiLoadHeaderBinding uiLoadHeaderBinding;
+    private final UiLoadHeaderBinding uiLoadHeaderBinding;
 
     public LoadHeader(Context context) {
         this(context,null);
@@ -39,8 +43,8 @@ public class LoadHeader extends LinearLayout implements RefreshHeader {
 
     public LoadHeader(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        uiLoadHeaderBinding = UiLoadHeaderBinding.inflate(LayoutInflater.from(context));
-        setLayoutParams(new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+        setLayoutParams(new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT));
+        uiLoadHeaderBinding = UiLoadHeaderBinding.inflate(LayoutInflater.from(context), this, false);
         addView(uiLoadHeaderBinding.getRoot());
     }
 
@@ -86,9 +90,10 @@ public class LoadHeader extends LinearLayout implements RefreshHeader {
 
     @Override
     public int onFinish(@NonNull RefreshLayout refreshLayout, boolean success) {
-        //uiLoadHeaderBinding.h0.cancelAnimation();
-
-        return 500;
+        uiLoadHeaderBinding.h0.setVisibility(GONE);
+        uiLoadHeaderBinding.h1.setVisibility(VISIBLE);
+        //new Handler().postDelayed(() -> UiUtils.runUi(() -> uiLoadHeaderBinding.h1.setVisibility(GONE)), 500);
+        return 1000;
     }
 
     @Override
@@ -106,26 +111,19 @@ public class LoadHeader extends LinearLayout implements RefreshHeader {
         switch (newState) {
             case None:
                 uiLoadHeaderBinding.h0.cancelAnimation();
+                uiLoadHeaderBinding.h1.setVisibility(GONE);
+                uiLoadHeaderBinding.h0.setVisibility(VISIBLE);
+
                 break;
             case PullDownToRefresh:
-              /*  mHeaderText.setText("下拉开始刷新");
-                mArrowView.setVisibility(VISIBLE);//显示下拉箭头
-                mProgressView.setVisibility(GONE);//隐藏动画
-                mArrowView.animate().rotation(0);//还原箭头方向*/
-                //uiLoadHeaderBinding.h0.playAnimation();
-                break;
-            case Refreshing:
-               /* mHeaderText.setText("正在刷新");
-                mProgressView.setVisibility(VISIBLE);//显示加载动画
-                mArrowView.setVisibility(GONE);//隐藏箭头*/
-                //uiLoadHeaderBinding.h0.playAnimation();
+                // 下拉开始刷新
                 uiLoadHeaderBinding.h0.playAnimation();
                 break;
+            case Refreshing:
+                // 正在刷新
+                break;
             case ReleaseToRefresh:
-/*                mHeaderText.setText("释放立即刷新");
-                mArrowView.animate().rotation(180);//显示箭头改为朝上*/
-                //uiLoadHeaderBinding.h0.cancelAnimation();
-                // uiLoadHeaderBinding.h0.playAnimation();
+                // 释放立即刷新
                 break;
         }
     }

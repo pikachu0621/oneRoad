@@ -1,0 +1,35 @@
+{
+  "message":"success",
+  "title": [
+    {
+      "type": 0,
+      "title": "每日必看",
+      "url": "index/loadIndex-0.json"
+    },
+    {
+      "type": 1,
+      "title": "推荐",
+      "url": "index/loadIndex-1.json"
+    },
+    {
+      "type": 2,
+      "title": "国际新闻",
+      "url": "index/loadIndex-2.json"
+    },
+    {
+      "type": 3,
+      "title": "风景介绍",
+      "url": "index/loadIndex-3.json"
+    },
+    {
+      "type": 4,
+      "title": "抗疫",
+      "url": "https://i.snssdk.com/ugc/hotboard_fe/hot_list/template/hot_list/forum_tab.html?activeWidget=0&show_share=0"
+    },
+    {
+      "type": 5,
+      "title": "图片",
+      "url": "index/loadIndex-5.json"
+    }
+  ]
+}

@@ -1,8 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!--第二种item布局-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <!--单独的大图片 item-->
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="4dp"
+    android:id="@+id/h_item_relative1">
+
+    <com.pikachu.utils.view.QMUIRadiusImageView
+        android:id="@+id/b_img_0"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/user_img"
+        app:qmui_corner_radius="6dp" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_below="@id/b_img_0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="6dp"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/b_img_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="@string/app_name"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:textColor="@color/color_4"
+            android:layout_marginEnd="30dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@drawable/ic_main_item_good"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/b_img_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="100"
+                android:textColor="@color/color_5"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_main_item_msg"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/b_img_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="100"
+                android:textColor="@color/color_5"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <com.pikachu.utils.view.QMUIRadiusImageView
+        android:id="@+id/b_img_4"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/b_img_0"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-15dp"
+        android:layout_marginEnd="14dp"
+        android:scaleType="center"
+        android:src="@mipmap/user_img"
+        app:qmui_border_color="@color/white"
+        app:qmui_border_width="2dp"
+        app:qmui_is_circle="true" />
+
+
+
+</RelativeLayout>

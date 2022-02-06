@@ -18,6 +18,7 @@ import com.mayunfeng.road.mode.JsonIndexMode;
 import com.pikachu.utils.adapter.BaseAdapter;
 import com.pikachu.utils.adapter.QuickAdapter;
 import com.pikachu.utils.utils.GlideUtils;
+import com.pikachu.utils.utils.TimeUtils;
 
 import java.util.List;
 
@@ -32,8 +33,8 @@ public class MainMixAdapter extends BaseAdapter<JsonIndexMode.ContentDTO> {
     public static final int IMG_1 = -1, // 一张图片样式
             IMG_3 = -2, // 3张图片样式
             VIDEO = -3, // 频样式
-            BIG_IMG = -4, // 全视频样式
-            BIG_VIDEO = -5, // 全图片样式
+            BIG_IMG = -4,  // 全图片样式
+            BIG_VIDEO = -5, // 全视频样式
             TODAY = -6; // 每日必看
     private final OnMainMixItemClickListener<JsonIndexMode.ContentDTO> onMainMixItemClickListener;
 
@@ -127,7 +128,14 @@ public class MainMixAdapter extends BaseAdapter<JsonIndexMode.ContentDTO> {
         if (itemViewType == BIG_IMG){
             UiMainItemBigImgBinding bind = (UiMainItemBigImgBinding) binding;
 
+            GlideUtils.with(context).load(itemData.getUserImage()).into(bind.bImg4); // 用户头像
+            bind.bImg1.setText(itemData.getArticleTitle());
+            bind.bImg2.setText(itemData.getArticleLaudNum() + "");
+            bind.bImg3.setText(itemData.getArticleCommentNum() + "");
 
+
+            JsonIndexMode.ContentDTO.DataSourceDTO dataSourceDTO = itemData.getDataSource().get(0);
+            GlideUtils.with(context).load(dataSourceDTO.getUrl()).into(bind.bImg0);
 
             return;
         }
@@ -136,12 +144,19 @@ public class MainMixAdapter extends BaseAdapter<JsonIndexMode.ContentDTO> {
             UiMainItemBigVideoBinding bind = (UiMainItemBigVideoBinding) binding;
 
 
+
             return;
         }
 
         if (itemViewType == TODAY){
             UiMainItemTodayBinding bind = (UiMainItemTodayBinding) binding;
 
+            bind.today2.setText(itemData.getArticleTitle()); // 文章标题
+            bind.today3.setText(itemData.getArticleLaudNum() + ""); // 点赞数
+            bind.today4.setText(TimeUtils.dataToStr(itemData.getArticleOutTime(), "yyyy年MM月dd日")); // 日期
+
+            JsonIndexMode.ContentDTO.DataSourceDTO dataSourceDTO = itemData.getDataSource().get(0);
+            GlideUtils.with(context).load(dataSourceDTO.getUrl()).transition(200).into(bind.today1);
 
             return;
         }

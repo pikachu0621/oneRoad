@@ -15,17 +15,15 @@ import java.util.List;
  */
 public class JsonIndexMode implements Serializable {
 
-
-
-    private List<TitleDTO> title; // 首页标题
+    private String message;
     private List<ContentDTO> content; // 首页内容推荐
 
-    public List<TitleDTO> getTitle() {
-        return title;
+    public String getMessage() {
+        return message;
     }
 
-    public void setTitle(List<TitleDTO> title) {
-        this.title = title;
+    public void setMessage(String message) {
+        this.message = message;
     }
 
     public List<ContentDTO> getContent() {
@@ -36,26 +34,7 @@ public class JsonIndexMode implements Serializable {
         this.content = content;
     }
 
-    public static class TitleDTO implements Serializable {
-        private int type; // 类型 此类型非上面的类型 （以此类型进行数据加载）
-        private String title; // 标题Str
 
-        public int getType() {
-            return type;
-        }
-
-        public void setType(int type) {
-            this.type = type;
-        }
-
-        public String getTitle() {
-            return title;
-        }
-
-        public void setTitle(String title) {
-            this.title = title;
-        }
-    }
 
     public static class ContentDTO implements Serializable {  // 内容Json  适配于首页，视频 全部数据
         private int type; // 类型 同上面的类型     -6 ~ -1
