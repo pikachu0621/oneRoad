@@ -177,6 +177,7 @@ public class JsonIndexMode implements Serializable {
         public static class DataSourceDTO implements Serializable {
             private int id; // 数据id
             private String url; // 数据url
+            private int pxh; // 图片高 dp
 
             public int getId() {
                 return id;
@@ -192,6 +193,14 @@ public class JsonIndexMode implements Serializable {
 
             public void setUrl(String url) {
                 this.url = url;
+            }
+
+            public int getPxh() {
+                return pxh;
+            }
+
+            public void setPxh(int hxp) {
+                this.pxh = hxp;
             }
         }
     }

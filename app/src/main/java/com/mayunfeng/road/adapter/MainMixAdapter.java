@@ -3,6 +3,9 @@ package com.mayunfeng.road.adapter;
 import android.annotation.SuppressLint;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import androidx.viewbinding.ViewBinding;
 
@@ -18,7 +21,10 @@ import com.mayunfeng.road.mode.JsonIndexMode;
 import com.pikachu.utils.adapter.BaseAdapter;
 import com.pikachu.utils.adapter.QuickAdapter;
 import com.pikachu.utils.utils.GlideUtils;
+import com.pikachu.utils.utils.LogsUtils;
+import com.pikachu.utils.utils.OtherUtils;
 import com.pikachu.utils.utils.TimeUtils;
+import com.pikachu.utils.utils.UiUtils;
 
 import java.util.List;
 
@@ -128,13 +134,21 @@ public class MainMixAdapter extends BaseAdapter<JsonIndexMode.ContentDTO> {
         if (itemViewType == BIG_IMG){
             UiMainItemBigImgBinding bind = (UiMainItemBigImgBinding) binding;
 
+
             GlideUtils.with(context).load(itemData.getUserImage()).into(bind.bImg4); // 用户头像
             bind.bImg1.setText(itemData.getArticleTitle());
             bind.bImg2.setText(itemData.getArticleLaudNum() + "");
             bind.bImg3.setText(itemData.getArticleCommentNum() + "");
 
 
+
             JsonIndexMode.ContentDTO.DataSourceDTO dataSourceDTO = itemData.getDataSource().get(0);
+
+            LogsUtils.showLog("TEST_TT", dataSourceDTO.getPxh());
+            ViewGroup.LayoutParams params =  bind.bImg0.getLayoutParams();
+            params.height = UiUtils.dp2px(context, dataSourceDTO.getPxh());
+            bind.bImg0.setLayoutParams(params);
+
             GlideUtils.with(context).load(dataSourceDTO.getUrl()).into(bind.bImg0);
 
             return;
