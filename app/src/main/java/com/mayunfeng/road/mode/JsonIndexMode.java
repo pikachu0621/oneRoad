@@ -175,32 +175,52 @@ public class JsonIndexMode implements Serializable {
         }
 
         public static class DataSourceDTO implements Serializable {
-            private int id; // 数据id
-            private String url; // 数据url
-            private int pxh; // 图片高 dp
+            private int imgId; // 数据id
+            private String imgUrl; // 数据url
+            private int imgPxh; // 图片高 dp
 
-            public int getId() {
-                return id;
+            private int videoId; //视频id
+            private String videoUrl; // 视频url
+
+
+            public int getImgId() {
+                return imgId;
             }
 
-            public void setId(int id) {
-                this.id = id;
+            public void setImgId(int imgId) {
+                this.imgId = imgId;
             }
 
-            public String getUrl() {
-                return url;
+            public String getImgUrl() {
+                return imgUrl;
             }
 
-            public void setUrl(String url) {
-                this.url = url;
+            public void setImgUrl(String imgUrl) {
+                this.imgUrl = imgUrl;
             }
 
-            public int getPxh() {
-                return pxh;
+            public int getImgPxh() {
+                return imgPxh;
             }
 
-            public void setPxh(int hxp) {
-                this.pxh = hxp;
+            public void setImgPxh(int imgPxh) {
+                this.imgPxh = imgPxh;
+            }
+
+            public int getVideoId() {
+                return videoId;
+            }
+
+            public void setVideoId(int videoId) {
+                this.videoId = videoId;
+            }
+
+            public String getVideoUrl() {
+                return videoUrl;
+            }
+
+            public void setVideoUrl(String videoUrl) {
+                this.videoUrl = videoUrl;
             }
         }
     }

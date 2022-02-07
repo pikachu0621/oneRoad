@@ -1,8 +1,8 @@
 {
-  "message": "success",
+  "message":"success",
   "content": [
     {
-      "type": -6,
+       "type": -5,
       "userId": 1,
       "userName": "新华网",
       "userGrade": -1,
@@ -22,26 +22,12 @@
           "imgUrl": "http://pkpk.run/loadImg/p1.jpg",
           "imgPxh": 200,
           "videoId": 0,
-          "videoUrl": ""
-        },
-        {
-          "imgId": 1,
-          "imgUrl": "http://pkpk.run/loadImg/p2.jpg",
-          "imgPxh": 200,
-          "videoId": 0,
-          "videoUrl": ""
-        },
-        {
-          "imgId": 2,
-          "imgUrl": "http://pkpk.run/loadImg/p3.jpg",
-          "imgPxh": 200,
-          "videoId": 0,
-          "videoUrl": ""
+          "videoUrl": "http://pkpk.run/loadImg/video/test6.mp4"
         }
       ]
     },
     {
-      "type": -6,
+       "type": -5,
       "userId": 1,
       "userName": "新华网",
       "userGrade": -1,
@@ -61,26 +47,12 @@
           "imgUrl": "http://pkpk.run/loadImg/p4.jpg",
           "imgPxh": 200,
           "videoId": 0,
-          "videoUrl": ""
-        },
-        {
-          "imgId": 0,
-          "imgUrl": "http://pkpk.run/loadImg/p5.jpg",
-          "imgPxh": 200,
-          "videoId": 0,
-          "videoUrl": ""
-        },
-        {
-          "imgId": 0,
-          "imgUrl": "http://pkpk.run/loadImg/p6.jpg",
-          "imgPxh": 200,
-          "videoId": 0,
-          "videoUrl": ""
+          "videoUrl": "http://pkpk.run/loadImg/video/test.mp4"
         }
       ]
     },
     {
-      "type": -6,
+       "type": -5,
       "userId": 1,
       "userName": "新华网",
       "userGrade": -1,
@@ -100,26 +72,12 @@
           "imgUrl": "http://pkpk.run/loadImg/p7.jpg",
           "imgPxh": 200,
           "videoId": 0,
-          "videoUrl": ""
-        },
-        {
-          "imgId": 0,
-          "imgUrl": "http://pkpk.run/loadImg/p8.jpg",
-          "imgPxh": 200,
-          "videoId": 0,
-          "videoUrl": ""
-        },
-        {
-          "imgId": 0,
-          "imgUrl": "http://pkpk.run/loadImg/p9.jpg",
-          "imgPxh": 200,
-          "videoId": 0,
-          "videoUrl": ""
+          "videoUrl": "http://pkpk.run/loadImg/video/test2.mp4"
         }
       ]
     },
     {
-      "type": -6,
+       "type": -5,
       "userId": 2,
       "userName": "今日中国",
       "userGrade": -1,
@@ -139,26 +97,12 @@
           "imgUrl": "http://pkpk.run/loadImg/p10.jpg",
           "imgPxh": 200,
           "videoId": 0,
-          "videoUrl": ""
-        },
-        {
-          "imgId": 0,
-          "imgUrl": "http://pkpk.run/loadImg/p11.jpg",
-          "imgPxh": 200,
-          "videoId": 0,
-          "videoUrl": ""
-        },
-        {
-          "imgId": 0,
-          "imgUrl": "http://pkpk.run/loadImg/p12.jpg",
-          "imgPxh": 200,
-          "videoId": 0,
-          "videoUrl": ""
+          "videoUrl": "http://pkpk.run/loadImg/video/test3.mp4"
         }
       ]
     },
     {
-      "type": -6,
+       "type": -5,
       "userId": 3,
       "userName": "全球连线",
       "userGrade": -1,
@@ -178,12 +122,12 @@
           "imgUrl": "http://pkpk.run/loadImg/p5.jpg",
           "imgPxh": 200,
           "videoId": 0,
-          "videoUrl": ""
+          "videoUrl": "http://pkpk.run/loadImg/video/test4.mp4"
         }
       ]
     },
     {
-      "type": -6,
+       "type": -5,
       "userId": 1,
       "userName": "新华网",
       "userGrade": -1,
@@ -203,12 +147,12 @@
           "imgUrl": "http://pkpk.run/loadImg/p8.jpg",
           "imgPxh": 200,
           "videoId": 0,
-          "videoUrl": ""
+          "videoUrl": "http://pkpk.run/loadImg/video/test5.mp4"
         }
       ]
     },
     {
-      "type": -6,
+       "type": -5,
       "userId": 1,
       "userName": "新华网",
       "userGrade": -1,
@@ -228,7 +172,7 @@
           "imgUrl": "http://pkpk.run/loadImg/p16.jpg",
           "imgPxh": 200,
           "videoId": 0,
-          "videoUrl": ""
+          "videoUrl": "http://pkpk.run/loadImg/video/test7.mp4"
         }
       ]
     }

@@ -30,6 +30,7 @@ import com.mayunfeng.road.mode.JsonIndexMode;
 import com.mayunfeng.road.mode.JsonTabMode;
 import com.pikachu.utils.base.BaseFragment;
 import com.pikachu.utils.utils.AssetsUtils;
+import com.pikachu.utils.utils.UiUtils;
 
 import java.util.List;
 
@@ -63,10 +64,14 @@ public class ListFragment extends BaseFragment<FragmentListBinding> implements O
     @Override
     protected void onInitView(Bundle savedInstanceState, FragmentListBinding binding, FragmentActivity activity) {
         binding.list1.setText(bundle.getTitle());
+
+
         // test 假数据
         showLog(bundle.getTitle(), bundle.getUrl());
-
         String jsonStr = AssetsUtils.readAssetsString(context, bundle.getUrl());
+        // 隐藏load
+        hideLoadView();
+
         switch (bundle.getType()) {
             case 0:
             case 1:
@@ -101,8 +106,26 @@ public class ListFragment extends BaseFragment<FragmentListBinding> implements O
     }
 
 
+
+    private void showLoadView(){
+        binding.listLottie.setVisibility(View.VISIBLE);
+        binding.listLottie1.playAnimation();
+    }
+
+
+    private void hideLoadView(){
+        binding.listLottie.setVisibility(View.GONE);
+        binding.listLottie1.cancelAnimation();
+    }
+
+
+
+
+
+
     @SuppressLint("SetJavaScriptEnabled")
     private void webStyleDisplay() {
+        showLoadView();
         binding.listWeb.loadUrl(bundle.getUrl());
         binding.listWeb.setWebViewClient(new WebViewClient() {
 
@@ -115,7 +138,8 @@ public class ListFragment extends BaseFragment<FragmentListBinding> implements O
                         showLog(js);
                         view.loadUrl(js);
                         view.loadUrl("javascript:hide();");
-                    }, 1000);
+                        hideLoadView();
+                    }, 2000);
                 }
                 super.onPageFinished(view, url);
             }
@@ -132,6 +156,8 @@ public class ListFragment extends BaseFragment<FragmentListBinding> implements O
         webSettings.setDatabaseEnabled(true);
         webSettings.setAppCacheEnabled(true);
         webSettings.setDefaultTextEncodingName("utf-8");
+
+
     }
 
 

@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragment.VideoFragment">
+    tools:context=".ui.fragment.IndexFragment">
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:src="@mipmap/f4"
-        android:scaleType="centerCrop"
-        android:layout_gravity="center"/>
-</FrameLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/f_index_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_root" />
+
+
+    <include
+        android:id="@+id/top_root"
+        layout="@layout/ui_main_top_video_nar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:background="@drawable/dw_main_gradient_dow"
+        android:layout_below="@id/top_root" />
+
+</RelativeLayout>

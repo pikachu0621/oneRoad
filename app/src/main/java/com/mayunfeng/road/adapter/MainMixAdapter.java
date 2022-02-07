@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
@@ -27,6 +28,8 @@ import com.pikachu.utils.utils.TimeUtils;
 import com.pikachu.utils.utils.UiUtils;
 
 import java.util.List;
+
+import cn.jzvd.Jzvd;
 
 /**
  * @ProjectName: 一带一路
@@ -75,6 +78,7 @@ public class MainMixAdapter extends BaseAdapter<JsonIndexMode.ContentDTO> {
         binding.img31.setText(itemData.getArticleTitle());
         binding.img32.setText(itemData.getArticleContent());*/
 
+        //  11
         if (itemViewType == IMG_1){
             UiMainItemImg1Binding bind = (UiMainItemImg1Binding) binding;
 
@@ -88,7 +92,7 @@ public class MainMixAdapter extends BaseAdapter<JsonIndexMode.ContentDTO> {
             bind.img19.setText(itemData.getArticleLaudNum() + ""); // 点赞数
 
             JsonIndexMode.ContentDTO.DataSourceDTO dataSourceDTO = itemData.getDataSource().get(0); // 获取图片组
-            GlideUtils.with(context).load(dataSourceDTO.getUrl()).transition(200).into(bind.img13); // 加载图片
+            GlideUtils.with(context).load(dataSourceDTO.getImgUrl()).transition(200).into(bind.img13); // 加载图片
             return;
         }
 
@@ -105,9 +109,9 @@ public class MainMixAdapter extends BaseAdapter<JsonIndexMode.ContentDTO> {
             bind.img39.setText(itemData.getArticleLaudNum() + ""); // 点赞数
 
             List<JsonIndexMode.ContentDTO.DataSourceDTO> dataSource = itemData.getDataSource();
-            GlideUtils.with(context).load(dataSource.get(0).getUrl()).transition(200).into(bind.img3Root1);
-            GlideUtils.with(context).load(dataSource.get(1).getUrl()).transition(200).into(bind.img3Root2);
-            GlideUtils.with(context).load(dataSource.get(2).getUrl()).transition(200).into(bind.img3Root3);
+            GlideUtils.with(context).load(dataSource.get(0).getImgUrl()).transition(200).into(bind.img3Root1);
+            GlideUtils.with(context).load(dataSource.get(1).getImgUrl()).transition(200).into(bind.img3Root2);
+            GlideUtils.with(context).load(dataSource.get(2).getImgUrl()).transition(200).into(bind.img3Root3);
 
             return;
         }
@@ -124,7 +128,7 @@ public class MainMixAdapter extends BaseAdapter<JsonIndexMode.ContentDTO> {
             bind.img39.setText(itemData.getArticleLaudNum() + ""); // 点赞数
 
             JsonIndexMode.ContentDTO.DataSourceDTO dataSourceDTO = itemData.getDataSource().get(0);
-            GlideUtils.with(context).load(dataSourceDTO.getUrl()).transition(200).into(bind.uImg3Root);
+            GlideUtils.with(context).load(dataSourceDTO.getImgUrl()).transition(200).into(bind.uImg3Root);
 
             return;
         }
@@ -142,20 +146,36 @@ public class MainMixAdapter extends BaseAdapter<JsonIndexMode.ContentDTO> {
 
             JsonIndexMode.ContentDTO.DataSourceDTO dataSourceDTO = itemData.getDataSource().get(0);
             ViewGroup.LayoutParams params =  bind.bImg0.getLayoutParams();
-            params.height = UiUtils.dp2px(context, dataSourceDTO.getPxh());
+            params.height = UiUtils.dp2px(context, dataSourceDTO.getImgPxh());
             bind.bImg0.setLayoutParams(params);
-            GlideUtils.with(context).load(dataSourceDTO.getUrl()).into(bind.bImg0);
+            GlideUtils.with(context).load(dataSourceDTO.getImgUrl()).into(bind.bImg0);
 
             return;
         }
+
+
+
 
         if (itemViewType == BIG_VIDEO){
             UiMainItemBigVideoBinding bind = (UiMainItemBigVideoBinding) binding;
 
+            GlideUtils.with(context).load(itemData.getUserImage()).into(bind.img34); // 用户头像
+            bind.img35.setText(itemData.getUserName());
+            bind.img31.setText(itemData.getArticleTitle());
+            bind.img38.setText(itemData.getArticleCommentNum() + ""); //  评论数
+            bind.img39.setText(itemData.getArticleLaudNum() + ""); // 点赞数
 
-
+            JsonIndexMode.ContentDTO.DataSourceDTO dataSourceDTO = itemData.getDataSource().get(0);
+            bind.videoPlayer.setUp(dataSourceDTO.getVideoUrl(), "", Jzvd.SCREEN_NORMAL);
+            bind.videoPlayer.posterImageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+            GlideUtils.with(context).load(dataSourceDTO.getImgUrl()).into(bind.videoPlayer.posterImageView);
             return;
         }
+
+
+
+
+
 
         if (itemViewType == TODAY){
             UiMainItemTodayBinding bind = (UiMainItemTodayBinding) binding;
@@ -165,7 +185,7 @@ public class MainMixAdapter extends BaseAdapter<JsonIndexMode.ContentDTO> {
             bind.today4.setText(TimeUtils.dataToStr(itemData.getArticleOutTime(), "yyyy年MM月dd日")); // 日期
 
             JsonIndexMode.ContentDTO.DataSourceDTO dataSourceDTO = itemData.getDataSource().get(0);
-            GlideUtils.with(context).load(dataSourceDTO.getUrl()).transition(200).into(bind.today1);
+            GlideUtils.with(context).load(dataSourceDTO.getImgUrl()).transition(200).into(bind.today1);
 
             return;
         }
