@@ -25,10 +25,16 @@
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/ic_main_my_1.xml" value="0.35" />
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/ic_main_news.xml" value="0.35" />
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/ic_main_news_1.xml" value="0.35" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/ic_main_search.xml" value="0.35" />
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/ic_main_search_bg.xml" value="0.35" />
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/ic_main_video.xml" value="0.35" />
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/ic_main_video_1.xml" value="0.35" />
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/ic_mian_search_bg.xml" value="0.35" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/ic_msg_atme.xml" value="0.35" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/ic_msg_great.xml" value="0.35" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/ic_msg_great0.xml" value="0.35" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/ic_msg_msg.xml" value="0.35" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/ic_msg_systeam.xml" value="0.35" />
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/ic_video_add.xml" value="0.35" />
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/layout-v28/ui_main_item_img1.xml" value="0.317481884057971" />
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/layout/activity_main.xml" value="0.33" />
@@ -48,8 +54,10 @@
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/layout/ui_main_item_t1.xml" value="0.317481884057971" />
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/layout/ui_main_item_today.xml" value="0.3129528985507246" />
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/layout/ui_main_item_video.xml" value="0.33" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/layout/ui_main_top_msg_nar.xml" value="0.3338541666666667" />
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/layout/ui_main_top_nar.xml" value="0.3338541666666667" />
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/layout/ui_main_top_video_nar.xml" value="0.3338541666666667" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/layout/ui_msg_item_taik.xml" value="0.3338541666666667" />
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/xml/network_security_config.xml" value="0.3129528985507246" />
       </map>
     </option>

@@ -20,3 +20,11 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 -keep class  com.mayunfeng.road.databinding.* {*;}
+
+-keep class com.mayunfeng.road.mode.* {*;}
+
+
+-keep public class cn.jzvd.JZMediaSystem {*; }
+-keep class tv.danmaku.ijk.media.player.** {*; }
+-dontwarn tv.danmaku.ijk.media.player.*
+-keep interface tv.danmaku.ijk.media.player.** { *; }

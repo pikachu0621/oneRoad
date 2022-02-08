@@ -63,8 +63,50 @@ public class ListFragment extends BaseFragment<FragmentListBinding> implements O
 
     @Override
     protected void onInitView(Bundle savedInstanceState, FragmentListBinding binding, FragmentActivity activity) {
-        binding.list1.setText(bundle.getTitle());
+       /* binding.list1.setText(bundle.getTitle());
 
+        // test 假数据
+        showLog(bundle.getTitle(), bundle.getUrl());
+        String jsonStr = AssetsUtils.readAssetsString(context, bundle.getUrl());
+        // 隐藏load
+        hideLoadView();
+
+        switch (bundle.getType()) {
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+                binding.list3.setEnableLoadMore(true);
+                binding.list3.setEnableRefresh(true);
+
+                binding.listWeb.setVisibility(View.GONE);
+                binding.list2.setVisibility(View.VISIBLE);
+                JsonIndexMode jsonIndexMode = new Gson().fromJson(jsonStr, JsonIndexMode.class);
+                binding.list2.setAdapter(new MainMixAdapter(jsonIndexMode.getContent(), this));
+                binding.list2.setLayoutManager(new LinearLayoutManager(context));
+                break;
+            case 4:
+                binding.list3.setEnableLoadMore(false);
+                binding.list3.setEnableRefresh(false);
+
+                binding.list2.setVisibility(View.GONE);
+                binding.listWeb.setVisibility(View.VISIBLE);
+                webStyleDisplay();
+                break;
+            case 5:
+                binding.list3.setEnableLoadMore(true);
+                binding.list3.setEnableRefresh(true);
+                JsonIndexMode jsonIndexMode1 = new Gson().fromJson(jsonStr, JsonIndexMode.class);
+                binding.list2.setAdapter(new MainMixAdapter(jsonIndexMode1.getContent(), this));
+                binding.list2.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
+
+        }*/
+
+    }
+
+    @Override
+    protected void lazyLoad() {
+        binding.list1.setText(bundle.getTitle());
 
         // test 假数据
         showLog(bundle.getTitle(), bundle.getUrl());
@@ -102,7 +144,6 @@ public class ListFragment extends BaseFragment<FragmentListBinding> implements O
                 binding.list2.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
 
         }
-
     }
 
 
@@ -161,10 +202,7 @@ public class ListFragment extends BaseFragment<FragmentListBinding> implements O
     }
 
 
-    @Override
-    protected void lazyLoad() {
 
-    }
 
 
     @Override

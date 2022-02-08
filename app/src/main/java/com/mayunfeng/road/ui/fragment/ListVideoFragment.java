@@ -60,6 +60,25 @@ public class ListVideoFragment extends BaseFragment<FragmentListBinding> impleme
 
     @Override
     protected void onInitView(Bundle savedInstanceState, FragmentListBinding binding, FragmentActivity activity) {
+       /* binding.list1.setText(bundle.getTitle());
+
+        // test 假数据
+        showLog(bundle.getTitle(), bundle.getUrl());
+        String jsonStr = AssetsUtils.readAssetsString(context, bundle.getUrl());
+        // 隐藏load
+        binding.listWeb.setVisibility(View.GONE);
+        binding.list2.setVisibility(View.VISIBLE);
+
+
+        JsonIndexMode jsonIndexMode = new Gson().fromJson(jsonStr, JsonIndexMode.class);
+        binding.list2.setAdapter(new MainMixAdapter(jsonIndexMode.getContent(), this));
+        linearLayoutManager = new LinearLayoutManager(context);
+        binding.list2.setLayoutManager(linearLayoutManager);
+        setAutoPlay();*/
+    }
+
+    @Override
+    protected void lazyLoad() {
         binding.list1.setText(bundle.getTitle());
 
         // test 假数据
@@ -76,7 +95,6 @@ public class ListVideoFragment extends BaseFragment<FragmentListBinding> impleme
         binding.list2.setLayoutManager(linearLayoutManager);
         setAutoPlay();
     }
-
 
 
 
@@ -137,13 +155,11 @@ public class ListVideoFragment extends BaseFragment<FragmentListBinding> impleme
         Jzvd.releaseAllVideos();
     }
 
-
-
     @Override
-    protected void lazyLoad() {
-
+    public void onStop() {
+        super.onStop();
+        Jzvd.releaseAllVideos();
     }
-
 
     @Override
     public boolean onClickItem(JsonIndexMode.ContentDTO itemData) {

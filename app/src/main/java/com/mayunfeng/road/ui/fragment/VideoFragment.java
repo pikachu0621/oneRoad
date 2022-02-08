@@ -41,16 +41,20 @@ public class VideoFragment extends BaseFragment<FragmentVideoBinding> {
 
     @Override
     protected void onInitView(Bundle savedInstanceState, FragmentVideoBinding binding, FragmentActivity activity) {
-
-    }
-
-    @Override
-    protected void lazyLoad() {
         // 加载Tab标题
         String s = AssetsUtils.readAssetsString(context, "video/loadVideoTab.json");
         //showLog(s);
         JsonTabMode jsonTabMode = new Gson().fromJson(s, JsonTabMode.class);
         loadTabAndFragment(jsonTabMode);
+    }
+
+    @Override
+    protected void lazyLoad() {
+/*        // 加载Tab标题
+        String s = AssetsUtils.readAssetsString(context, "video/loadVideoTab.json");
+        //showLog(s);
+        JsonTabMode jsonTabMode = new Gson().fromJson(s, JsonTabMode.class);
+        loadTabAndFragment(jsonTabMode);*/
     }
 
 
