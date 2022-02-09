@@ -1,0 +1,235 @@
+{
+  "message":"success",
+  "content": [
+    {
+      "type": -1,
+      "userId": 1,
+      "userName": "新华网",
+      "userGrade": -1,
+      "userImage": "http://pkpk.run/loadImg/p1.jpg",
+      "msgNewNum": 200,
+      "msgList":[
+        {
+          "msgStr": "对穿点衣服哦",
+          "msgType": 1,
+          "msgTime": "昨天"
+        },
+        {
+          "msgStr": "今天好冷",
+          "msgType": 0,
+          "msgTime": "昨天"
+        }
+      ]
+    },
+
+    {
+      "type": -1,
+      "userId": 1,
+      "userName": "新华网",
+      "userGrade": -1,
+      "userImage": "http://pkpk.run/loadImg/p2.jpg",
+      "msgNewNum": 17,
+      "msgList":[
+        {
+          "msgStr": "对穿点衣服哦",
+          "msgType": 1,
+          "msgTime": "昨天"
+        },
+        {
+          "msgStr": "今天好冷",
+          "msgType": 0,
+          "msgTime": "昨天"
+        }
+      ]
+    },
+
+    {
+      "type": -2,
+      "userId": 1,
+      "userName": "新华网",
+      "userGrade": -1,
+      "userImage": "http://pkpk.run/loadImg/p3.jpg",
+      "msgNewNum": 1,
+      "msgList":[
+        {
+          "msgStr": "对穿点衣服哦",
+          "msgType": 1,
+          "msgTime": "昨天"
+        },
+        {
+          "msgStr": "今天好冷",
+          "msgType": 0,
+          "msgTime": "昨天"
+        }
+      ]
+    },
+
+    {
+      "type": -2,
+      "userId": 1,
+      "userName": "新华网",
+      "userGrade": -1,
+      "userImage": "http://pkpk.run/loadImg/p4.jpg",
+      "msgNewNum": 2,
+      "msgList":[
+        {
+          "msgStr": "对穿点衣服哦",
+          "msgType": 1,
+          "msgTime": "昨天"
+        },
+        {
+          "msgStr": "今天好冷",
+          "msgType": 0,
+          "msgTime": "昨天"
+        }
+      ]
+    },
+
+    {
+      "type": -3,
+      "userId": 1,
+      "userName": "新华网",
+      "userGrade": -1,
+      "userImage": "http://pkpk.run/loadImg/p1.jpg",
+      "msgNewNum": 6,
+      "msgList":[
+        {
+          "msgStr": "对穿点衣服哦",
+          "msgType": 1,
+          "msgTime": "昨天"
+        },
+        {
+          "msgStr": "今天好冷",
+          "msgType": 0,
+          "msgTime": "昨天"
+        }
+      ]
+    },
+
+    {
+      "type": -3,
+      "userId": 1,
+      "userName": "新华网",
+      "userGrade": -1,
+      "userImage": "http://pkpk.run/loadImg/p3.jpg",
+      "msgNewNum": 8,
+      "msgList":[
+        {
+          "msgStr": "对穿点衣服哦",
+          "msgType": 1,
+          "msgTime": "昨天"
+        },
+        {
+          "msgStr": "今天好冷",
+          "msgType": 0,
+          "msgTime": "昨天"
+        }
+      ]
+    },
+
+    {
+      "type": -3,
+      "userId": 1,
+      "userName": "新华网",
+      "userGrade": -1,
+      "userImage": "http://pkpk.run/loadImg/p4.jpg",
+      "msgNewNum": 4,
+      "msgList":[
+        {
+          "msgStr": "对穿点衣服哦",
+          "msgType": 1,
+          "msgTime": "昨天"
+        },
+        {
+          "msgStr": "今天好冷",
+          "msgType": 0,
+          "msgTime": "昨天"
+        }
+      ]
+    },
+
+    {
+      "type": -3,
+      "userId": 1,
+      "userName": "新华网",
+      "userGrade": -1,
+      "userImage": "http://pkpk.run/loadImg/p5.jpg",
+      "msgNewNum": 1,
+      "msgList":[
+        {
+          "msgStr": "对穿点衣服哦",
+          "msgType": 1,
+          "msgTime": "昨天"
+        },
+        {
+          "msgStr": "今天好冷",
+          "msgType": 0,
+          "msgTime": "昨天"
+        }
+      ]
+    },
+
+    {
+      "type": -4,
+      "userId": 1,
+      "userName": "新华网",
+      "userGrade": -1,
+      "userImage": "http://pkpk.run/loadImg/p2.jpg",
+      "msgNewNum": 1,
+      "msgList":[
+        {
+          "msgStr": "对穿点衣服哦",
+          "msgType": 1,
+          "msgTime": "昨天"
+        },
+        {
+          "msgStr": "今天好冷",
+          "msgType": 0,
+          "msgTime": "昨天"
+        }
+      ]
+    },
+
+    {
+      "type": -4,
+      "userId": 1,
+      "userName": "新华网",
+      "userGrade": -1,
+      "userImage": "http://pkpk.run/loadImg/p3.jpg",
+      "msgNewNum": 20,
+      "msgList":[
+        {
+          "msgStr": "对穿点衣服哦",
+          "msgType": 1,
+          "msgTime": "昨天"
+        },
+        {
+          "msgStr": "今天好冷",
+          "msgType": 0,
+          "msgTime": "昨天"
+        }
+      ]
+    },
+
+    {
+      "type": -4,
+      "userId": 1,
+      "userName": "新华网",
+      "userGrade": -1,
+      "userImage": "http://pkpk.run/loadImg/p4.jpg",
+      "msgNewNum": 1,
+      "msgList":[
+        {
+          "msgStr": "对穿点衣服哦",
+          "msgType": 1,
+          "msgTime": "昨天"
+        },
+        {
+          "msgStr": "今天好冷",
+          "msgType": 0,
+          "msgTime": "昨天"
+        }
+      ]
+    }
+  ]
+}

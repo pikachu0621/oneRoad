@@ -5,6 +5,12 @@
       <map>
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.35" />
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/dw_main_header_bg.xml" value="0.23796296296296296" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/dw_main_msg_new.xml" value="0.35" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/dw_main_msg_type.xml" value="0.35" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/dw_main_msg_type1_bg.xml" value="0.35" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/dw_main_msg_type2_bg.xml" value="0.35" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/dw_main_msg_type3_bg.xml" value="0.35" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/dw_main_msg_type4_bg.xml" value="0.35" />
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/dw_main_search_bg.xml" value="0.35" />
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/dw_video_mask.xml" value="0.35" />
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/gradient_dow.xml" value="0.35" />
@@ -58,6 +64,7 @@
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/layout/ui_main_top_nar.xml" value="0.3338541666666667" />
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/layout/ui_main_top_video_nar.xml" value="0.3338541666666667" />
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/layout/ui_msg_item_taik.xml" value="0.3338541666666667" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/layout/ui_msg_item_talk.xml" value="0.33" />
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/xml/network_security_config.xml" value="0.3129528985507246" />
       </map>
     </option>

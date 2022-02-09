@@ -1,12 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
     <!-- 消息列表 ui  -->
 
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <com.pikachu.utils.view.QMUIRadiusImageView
+            android:id="@+id/m_l1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/user_img"
+            app:qmui_is_circle="true"
+            app:qmui_border_width="1.5dp"
+            app:qmui_border_color="@color/touch"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/m_l2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/test"
+            android:textColor="@color/color_4"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/m_l3"
+            app:layout_constraintStart_toEndOf="@+id/m_l1"
+            app:layout_constraintTop_toTopOf="@+id/m_l1" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/m_l3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="02-06"
+            android:textColor="@color/color_3"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/m_l2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/m_l2" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/m_l4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="50dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/test"
+            android:textColor="@color/color_5"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/m_l1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/m_l1" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/m_l5"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:padding="2dp"
+            android:background="@drawable/dw_main_msg_new_bg"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="88"
+            app:autoSizeMinTextSize="5sp"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMaxTextSize="9sp"
+            android:textColor="@color/white"
+            android:textSize="9sp"
+            app:layout_constraintBottom_toBottomOf="@+id/m_l4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/m_l4"
+            tools:ignore="SmallSp" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/m_l6"
+            android:layout_width="28dp"
+            android:layout_height="17dp"
+            android:layout_marginStart="32dp"
+            android:background="@drawable/dw_main_msg_type1_bg"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="官方"
+            android:textColor="@color/white"
+            android:textSize="8sp"
+            app:layout_constraintBottom_toBottomOf="@+id/m_l1"
+            app:layout_constraintStart_toStartOf="@+id/m_l1"
+            tools:ignore="SmallSp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/color_1"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
