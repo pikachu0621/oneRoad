@@ -4,13 +4,13 @@
     {
       "type": -1,
       "userId": 1,
-      "userName": "新华网",
+      "userName": "老丈人",
       "userGrade": -1,
       "userImage": "http://pkpk.run/loadImg/p1.jpg",
       "msgNewNum": 200,
       "msgList":[
         {
-          "msgStr": "对穿点衣服哦",
+          "msgStr": "你这个废物，早点离开我女儿！",
           "msgType": 1,
           "msgTime": "昨天"
         },
@@ -25,13 +25,13 @@
     {
       "type": -1,
       "userId": 1,
-      "userName": "新华网",
+      "userName": "爸爸",
       "userGrade": -1,
       "userImage": "http://pkpk.run/loadImg/p2.jpg",
       "msgNewNum": 17,
       "msgList":[
         {
-          "msgStr": "对穿点衣服哦",
+          "msgStr": "家里房子倒了，能打点钱嘛",
           "msgType": 1,
           "msgTime": "昨天"
         },
@@ -46,13 +46,13 @@
     {
       "type": -2,
       "userId": 1,
-      "userName": "新华网",
+      "userName": "老婆",
       "userGrade": -1,
       "userImage": "http://pkpk.run/loadImg/p3.jpg",
       "msgNewNum": 1,
       "msgList":[
         {
-          "msgStr": "对穿点衣服哦",
+          "msgStr": "我怀孕了，孩子不是你的，对不起",
           "msgType": 1,
           "msgTime": "昨天"
         },
@@ -67,13 +67,13 @@
     {
       "type": -2,
       "userId": 1,
-      "userName": "新华网",
+      "userName": "王总",
       "userGrade": -1,
       "userImage": "http://pkpk.run/loadImg/p4.jpg",
       "msgNewNum": 2,
       "msgList":[
         {
-          "msgStr": "对穿点衣服哦",
+          "msgStr": "项目做的一塌糊涂，明天给我滚蛋",
           "msgType": 1,
           "msgTime": "昨天"
         },
@@ -88,13 +88,13 @@
     {
       "type": -3,
       "userId": 1,
-      "userName": "新华网",
+      "userName": "外卖小哥",
       "userGrade": -1,
       "userImage": "http://pkpk.run/loadImg/p1.jpg",
       "msgNewNum": 6,
       "msgList":[
         {
-          "msgStr": "对穿点衣服哦",
+          "msgStr": "上回你给我的差评一会找你算账？",
           "msgType": 1,
           "msgTime": "昨天"
         },
