@@ -6,6 +6,15 @@
     android:layout_height="wrap_content"
     tools:context=".ui.activity.MainActivity">
 
+    <View
+        android:id="@+id/t_root_view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/linearLayoutCompat"
         android:layout_width="match_parent"
@@ -15,7 +24,7 @@
         android:paddingHorizontal="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/t_root_view">
 
         <com.pikachu.utils.view.QMUIRadiusImageView
             android:id="@+id/top_img"
@@ -41,11 +50,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="40dp"
+                android:ellipsize="end"
+                android:maxLines="1"
                 android:text="习近平继续出席二十国集团领导人第十六次峰会"
                 android:textColor="@color/color_2"
-                android:textSize="13sp"
-                android:ellipsize="end"
-                android:maxLines="1"/>
+                android:textSize="13sp" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="18dp"
@@ -76,8 +85,8 @@
         app:tabIndicatorColor="@color/touch"
         app:tabIndicatorFullWidth="false"
         app:tabIndicatorHeight="2dp"
-        app:tabSelectedTextColor="@color/touch"
         app:tabMode="scrollable"
+        app:tabSelectedTextColor="@color/touch"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

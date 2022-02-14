@@ -5,6 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".ui.activity.MainActivity">
+    <View
+        android:id="@+id/t_root_view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/linearLayoutCompat"
@@ -15,7 +23,7 @@
         android:paddingHorizontal="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/t_root_view">
 
         <com.pikachu.utils.view.QMUIRadiusImageView
             android:id="@+id/top_img"

@@ -17,6 +17,7 @@ import com.mayunfeng.road.databinding.FragmentMeBinding;
 import com.mayunfeng.road.databinding.FragmentMsgBinding;
 import com.mayunfeng.road.mode.JsonIndexMode;
 import com.mayunfeng.road.mode.JsonMsgMode;
+import com.mayunfeng.road.ui.activity.MainActivity;
 import com.pikachu.utils.base.BaseFragment;
 import com.pikachu.utils.utils.AssetsUtils;
 
@@ -40,7 +41,8 @@ public class MsgFragment extends BaseFragment<FragmentMsgBinding> {
 
     @Override
     protected void onInitView(Bundle savedInstanceState, FragmentMsgBinding binding, FragmentActivity activity) {
-
+        //状态栏
+        MainActivity.setStatusBarHeight(binding.topRoot.tRootView, context);
 
 
 

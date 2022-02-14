@@ -9,9 +9,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.gyf.immersionbar.ImmersionBar;
 import com.mayunfeng.road.R;
 import com.mayunfeng.road.databinding.FragmentIndexBinding;
 import com.mayunfeng.road.databinding.FragmentMeBinding;
+import com.mayunfeng.road.ui.activity.MainActivity;
 import com.pikachu.utils.base.BaseFragment;
 
 /**
@@ -33,6 +35,11 @@ public class MeFragment extends BaseFragment<FragmentMeBinding> {
 
     @Override
     protected void onInitView(Bundle savedInstanceState, FragmentMeBinding binding, FragmentActivity activity) {
+        //状态栏
+        MainActivity.setStatusBarHeight(binding.tRootView, context);
+
+
+
 
     }
 

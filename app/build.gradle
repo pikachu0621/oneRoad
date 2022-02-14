@@ -88,4 +88,9 @@ dependencies {
     // 饺子播放器
     implementation 'cn.jzvd:jiaozivideoplayer:7.7.0'
 
+
+    //沉静状态栏
+    implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
+    implementation 'com.gyf.immersionbar:immersionbar-components:3.0.0'
+
 }

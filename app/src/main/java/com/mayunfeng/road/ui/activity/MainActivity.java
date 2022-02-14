@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 
 import com.mayunfeng.road.R;
 import com.mayunfeng.road.base.BaseBActivity;
@@ -18,11 +20,12 @@ import com.mayunfeng.road.ui.fragment.VideoFragment;
 import com.pikachu.utils.adapter.PagerAdapter;
 import com.pikachu.utils.base.BaseActivity;
 import com.pikachu.utils.utils.GlideUtils;
+import com.pikachu.utils.utils.UiUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends BaseBActivity<ActivityMainBinding> {
+public class MainActivity extends BaseActivity<ActivityMainBinding> {
 
 
     private int colorTouch;
@@ -30,11 +33,11 @@ public class MainActivity extends BaseBActivity<ActivityMainBinding> {
     private int positionOld;
 
     @Override
-    protected void initBActivity(Bundle savedInstanceState) {
+    protected void initActivity(Bundle savedInstanceState) {
+        setNoFullViewToWindow(R.color.white, true);
         initFragment();
-
-
     }
+
 
     private void initFragment() {
         List<Fragment> fragments = new ArrayList<>();
@@ -92,5 +95,16 @@ public class MainActivity extends BaseBActivity<ActivityMainBinding> {
         }
     }
 
+
+
+    public static void setStatusBarHeight(View view, Context context){
+        int statusBarHeight = UiUtils.getStatusBarHeight(context);
+        if (statusBarHeight <= 0){
+            statusBarHeight = UiUtils.dp2px(context, 36);
+        }
+        ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
+        layoutParams.height = statusBarHeight;
+        view.setLayoutParams(layoutParams);
+    }
 
 }

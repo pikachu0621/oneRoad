@@ -10,14 +10,17 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.google.gson.Gson;
+import com.gyf.immersionbar.ImmersionBar;
 import com.mayunfeng.road.R;
 import com.mayunfeng.road.databinding.FragmentIndexBinding;
 import com.mayunfeng.road.mode.JsonIndexMode;
 import com.mayunfeng.road.mode.JsonTabMode;
+import com.mayunfeng.road.ui.activity.MainActivity;
 import com.pikachu.utils.adapter.PagerAdapter;
 import com.pikachu.utils.base.BaseFragment;
 import com.pikachu.utils.utils.AssetsUtils;
 import com.pikachu.utils.utils.FileUtils;
+import com.pikachu.utils.utils.UiUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,6 +46,9 @@ public class IndexFragment extends BaseFragment<FragmentIndexBinding> {
 
     @Override
     protected void onInitView(Bundle savedInstanceState, FragmentIndexBinding binding, FragmentActivity activity) {
+        //状态栏
+        MainActivity.setStatusBarHeight(binding.topRoot.tRootView, context);
+
 
         // 加载Tab标题
         String s = AssetsUtils.readAssetsString(context, "index/loadTab.json");
