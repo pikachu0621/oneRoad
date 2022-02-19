@@ -46,6 +46,7 @@ public class MainMixAdapter extends BaseAdapter<JsonIndexMode.ContentDTO> {
             BIG_VIDEO = -5, // 全视频样式
             TODAY = -6; // 每日必看
     private final OnMainMixItemClickListener<JsonIndexMode.ContentDTO> onMainMixItemClickListener;
+    private boolean isHideMe = false;
 
 
     public MainMixAdapter(List<JsonIndexMode.ContentDTO> data, OnMainMixItemClickListener<JsonIndexMode.ContentDTO> onMainMixItemClickListener ) {
@@ -93,6 +94,8 @@ public class MainMixAdapter extends BaseAdapter<JsonIndexMode.ContentDTO> {
 
             JsonIndexMode.ContentDTO.DataSourceDTO dataSourceDTO = itemData.getDataSource().get(0); // 获取图片组
             GlideUtils.with(context).load(dataSourceDTO.getImgUrl()).transition(200).into(bind.img13); // 加载图片
+
+            bind.uTopRoot.setVisibility(isHideMe ? View.GONE : View.VISIBLE);
             return;
         }
 
@@ -113,6 +116,7 @@ public class MainMixAdapter extends BaseAdapter<JsonIndexMode.ContentDTO> {
             GlideUtils.with(context).load(dataSource.get(1).getImgUrl()).transition(200).into(bind.img3Root2);
             GlideUtils.with(context).load(dataSource.get(2).getImgUrl()).transition(200).into(bind.img3Root3);
 
+            bind.uTopRoot.setVisibility(isHideMe ? View.GONE : View.VISIBLE);
             return;
         }
 
@@ -130,6 +134,7 @@ public class MainMixAdapter extends BaseAdapter<JsonIndexMode.ContentDTO> {
             JsonIndexMode.ContentDTO.DataSourceDTO dataSourceDTO = itemData.getDataSource().get(0);
             GlideUtils.with(context).load(dataSourceDTO.getImgUrl()).transition(200).into(bind.uImg3Root);
 
+            bind.uTopRoot.setVisibility(isHideMe ? View.GONE : View.VISIBLE);
             return;
         }
 
@@ -150,6 +155,7 @@ public class MainMixAdapter extends BaseAdapter<JsonIndexMode.ContentDTO> {
             bind.bImg0.setLayoutParams(params);
             GlideUtils.with(context).load(dataSourceDTO.getImgUrl()).into(bind.bImg0);
 
+            bind.bImg4.setVisibility(isHideMe ? View.GONE : View.VISIBLE);
             return;
         }
 
@@ -169,6 +175,8 @@ public class MainMixAdapter extends BaseAdapter<JsonIndexMode.ContentDTO> {
             bind.videoPlayer.setUp(dataSourceDTO.getVideoUrl(), "", Jzvd.SCREEN_NORMAL);
             bind.videoPlayer.posterImageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
             GlideUtils.with(context).load(dataSourceDTO.getImgUrl()).into(bind.videoPlayer.posterImageView);
+
+            bind.uTopRoot.setVisibility(isHideMe ? View.GONE : View.VISIBLE);
             return;
         }
 
@@ -199,6 +207,15 @@ public class MainMixAdapter extends BaseAdapter<JsonIndexMode.ContentDTO> {
             }
 
         });
+    }
+
+    /**
+     * 隐藏关注，头像
+     * @param isHideMe 是否隐藏
+     */
+    public void setHideMe(boolean isHideMe){
+        this.isHideMe = isHideMe;
+        refresh();
     }
 
 

@@ -80,4 +80,10 @@ public class VideoFragment extends BaseFragment<FragmentVideoBinding> {
         binding.topRoot.topTabLayout.setupWithViewPager(binding.fIndex1);
     }
 
+
+
+    @Override
+    protected void onShow() {
+        setWindowTextBlackNow();
+    }
 }

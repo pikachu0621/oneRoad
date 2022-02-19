@@ -53,11 +53,18 @@ public class MsgFragment extends BaseFragment<FragmentMsgBinding> {
 
 
         // test 假数据
-        String jsonStr = AssetsUtils.readAssetsString(context, "msg/testMsg.json");
+        String jsonStr = AssetsUtils.readAssetsString(context, "msg/loadMsg.json");
 
         JsonMsgMode jsonMsgMode = new Gson().fromJson(jsonStr, JsonMsgMode.class);
 
         binding.msgRecycle.setLayoutManager(new LinearLayoutManager(context));
         binding.msgRecycle.setAdapter(new MainMsgAdapter(jsonMsgMode.getContent(), context));
+    }
+
+
+
+    @Override
+    protected void onShow() {
+        setWindowTextBlackNow();
     }
 }

@@ -14,6 +14,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewbinding.ViewBinding;
 
+import com.gyf.immersionbar.BarHide;
+import com.gyf.immersionbar.ImmersionBar;
 import com.pikachu.utils.utils.LogsUtils;
 import com.pikachu.utils.utils.ToastUtils;
 import com.pikachu.utils.utils.ViewBindingUtils;
@@ -240,6 +242,195 @@ public abstract class BaseFragment<T extends ViewBinding> extends Fragment {
         return getResources().getColor(id);
     }
 
+
+
+    /////////////////////////////////////// 状态栏 /////////////////////////////////////////////////
+
+    /**
+     * 重写此处 更改状态栏颜色
+     * <!-- 导入包 -->
+     * implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
+     * implementation 'com.gyf.immersionbar:immersionbar-components:3.0.0' // fragment快速实现（可选）
+     *
+     * <!-- 地址 -->
+     * https://github.com/gyf-dev/ImmersionBar
+     *
+     * <!-- 全面屏 -->
+     * 在manifest的Application节点中加入
+     * android:resizeableActivity="true"
+     *
+     * <!--适配华为（huawei）刘海屏-->
+     * <meta-data
+     * android:name="android.notch_support"
+     * android:value="true"/>
+     *
+     * <!--适配小米（xiaomi）刘海屏-->
+     * <meta-data
+     * android:name="notch.config"
+     * android:value="portrait|landscape" />
+     *
+     * <!--androidx-->
+     * android.enableJetifier=true
+     *
+     * @return ImmersionBar
+     */
+    protected ImmersionBar setImmersionBar() {
+        return ImmersionBar.with(this)
+                .barColor(android.R.color.white)
+                .statusBarDarkFont(true)  // 状态栏字体深色或亮色   true 深色
+                .fitsSystemWindows(true); // 解决布局与状态栏重叠问题
+    }
+
+    /**
+     * 设置状态栏为白色  字体为黑色
+     */
+    protected void setWindowBlack() {
+        ImmersionBar.with(this)
+                .barColor(android.R.color.white)
+                .statusBarDarkFont(true)  // 状态栏字体深色或亮色   true 深色
+                .fitsSystemWindows(true) // 解决布局与状态栏重叠问题
+                .init();
+
+    }
+
+    /**
+     * 自定义颜色  并且设置字体为黑色
+     */
+    protected void setWindowBlack(@ColorRes int barColor, @ColorRes int navColor ) {
+        ImmersionBar.with(this)
+                .barColor(barColor)
+                .navigationBarColor(navColor)
+                .statusBarDarkFont(true)  // 状态栏字体深色或亮色   true 深色
+                .fitsSystemWindows(true) // 解决布局与状态栏重叠问题
+                .init();
+
+    }
+
+
+
+
+    /**
+     * 设置状态栏为黑色 字体为白色
+     */
+    protected void setWindowWhite() {
+        ImmersionBar.with(this)
+                .barColor(android.R.color.black)
+                .statusBarDarkFont(false) //  true 深色
+                .fitsSystemWindows(true)
+                .init();
+    }
+
+
+    /**
+     * 自定义颜色  并且设置字体为白色
+     */
+    protected void setWindowWhite(@ColorRes int barColor, @ColorRes int navColor ) {
+        ImmersionBar.with(this)
+                .barColor(barColor)
+                .navigationBarColor(navColor)
+                .statusBarDarkFont(false) //  true 深色
+                .fitsSystemWindows(true)
+                .init();
+    }
+
+
+
+    //设置 状态栏字体 导航栏图标 为黑色
+    protected void setWindowTextBlack() {
+        ImmersionBar.with(this)
+                .statusBarDarkFont(true) //  true 深色
+                .fitsSystemWindows(true)
+                .navigationBarDarkIcon(true)
+                .init();
+    }
+
+    //设置 状态栏字体 导航栏图标 为白色
+    protected void setWindowTextWhite() {
+        ImmersionBar.with(this)
+                .statusBarDarkFont(false) //  true 深色
+                .fitsSystemWindows(false)
+                .fitsSystemWindows(true)
+                .init();
+    }
+
+
+
+
+    //设置 状态栏字体 导航栏图标 为黑色
+    protected void setWindowTextBlackNow() {
+        ImmersionBar.with(this)
+                .statusBarDarkFont(true) //  true 深色
+                .navigationBarDarkIcon(true)
+                .init();
+    }
+
+    //设置 状态栏字体 导航栏图标 为白色
+    protected void setWindowTextWhiteNow() {
+        ImmersionBar.with(this)
+                .statusBarDarkFont(false) //  true 深色
+                .fitsSystemWindows(false)
+                .init();
+    }
+
+
+
+
+    //设置 全屏
+    protected void setWindowFullScreen() {
+        ImmersionBar.with(this)
+                .fitsSystemWindows(false)
+                .hideBar(BarHide.FLAG_HIDE_BAR)
+                .init();
+    }
+
+
+    //设置 显示状态栏
+    protected void setWindowNoFullScreen() {
+        ImmersionBar.with(this)
+                .fitsSystemWindows(true)
+                .hideBar(BarHide.FLAG_SHOW_BAR).init();
+    }
+
+
+    //设置 显示状态栏并且布局延伸至状态栏
+    protected void setNoFullViewToWindow() {
+        ImmersionBar.with(this)
+                .fitsSystemWindows(false)
+                .hideBar(BarHide.FLAG_SHOW_BAR)
+                .init();
+    }
+
+    //设置 显示状态栏并且布局延伸至状态栏
+    protected void setNoFullViewToWindow(@ColorRes int navColor, boolean barDark) {
+        ImmersionBar.with(this)
+                .navigationBarColor(navColor)
+                .statusBarDarkFont(barDark) //  true 深色
+                .fitsSystemWindows(false)
+                .init();
+    }
+    //设置 显示状态栏并且布局不延伸至状态栏
+    protected void setNoFullViewToWindow(@ColorRes int barColor, @ColorRes int navColor, boolean barDark, boolean fits) {
+        ImmersionBar.with(this)
+                .barColor(barColor)
+                .navigationBarColor(navColor)
+                .statusBarDarkFont(barDark) //  true 深色
+                .fitsSystemWindows(fits)
+                .init();
+    }
+
+
+
+
+
+    //设置 布局占用状态栏
+    protected void setViewToWindow() {
+        ImmersionBar.with(this)
+                .fitsSystemWindows(false)
+                .init();
+    }
+
+
+/////////////////////////////////////// 状态栏 /////////////////////////////////////////////////
 
 
 }

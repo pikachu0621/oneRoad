@@ -1,0 +1,20 @@
+{
+  "message":"success",
+  "title": [
+    {
+      "type": 0,
+      "title": "发布",
+      "url": "me/loadMeRelease.json"
+    },
+    {
+      "type": 1,
+      "title": "赞过",
+      "url": "me/loadMeCollect.json"
+    },
+    {
+      "type": 2,
+      "title": "历史",
+      "url": "me/loadMeHistory.json"
+    }
+  ]
+}

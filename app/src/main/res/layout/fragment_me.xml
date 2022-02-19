@@ -7,7 +7,7 @@
 
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/m_f1_appBar"
+        android:id="@+id/f_me_appbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
@@ -23,11 +23,302 @@
             app:contentScrim="@color/white"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/m_f1_pager2"
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="310dp"
-                android:background="@mipmap/test" />
+                android:layout_height="310dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/appCompatImageView2"
+                    android:layout_width="0dp"
+                    android:layout_height="310dp"
+                    app:srcCompat="@mipmap/test"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="0dp"
+                    android:layout_height="310dp"
+                    android:background="@drawable/dw_me_mask"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <com.pikachu.utils.view.QMUIRadiusImageView
+                    android:id="@+id/QMUIRadiusImageView"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="100dp"
+                    android:src="@mipmap/user_img"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:qmui_border_color="@color/touch"
+                    app:qmui_border_width="2dp"
+                    app:qmui_is_circle="true" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="7dp"
+                    android:text="@string/app_name"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/QMUIRadiusImageView"
+                    app:layout_constraintTop_toTopOf="@+id/QMUIRadiusImageView" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="7dp"
+                    android:text="用户ID: 0000000001"
+                    android:textColor="@color/color_0"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/QMUIRadiusImageView"
+                    app:layout_constraintStart_toEndOf="@+id/QMUIRadiusImageView" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/test"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    app:layout_constraintEnd_toEndOf="@+id/appCompatImageView2"
+                    app:layout_constraintStart_toStartOf="@+id/QMUIRadiusImageView"
+                    app:layout_constraintTop_toBottomOf="@+id/QMUIRadiusImageView" />
+
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/m_f1_sex"
+                    android:layout_width="wrap_content"
+                    android:paddingHorizontal="7dp"
+                    android:layout_height="18dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/dw_me_sex"
+                    android:gravity="center"
+                    android:text="水瓶座"
+                    android:textColor="@color/white"
+                    android:textSize="9sp"
+                    app:layout_constraintStart_toStartOf="@+id/appCompatTextView3"
+                    app:layout_constraintTop_toBottomOf="@+id/appCompatTextView3"
+                    android:drawableStart="@drawable/ic_me_girl"/>
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/m_f1_sex"
+                    app:layout_constraintStart_toEndOf="@+id/m_f1_sex"
+                    app:layout_constraintTop_toBottomOf="@+id/appCompatTextView3">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/m_f1_area"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:paddingHorizontal="8dp"
+                        android:layout_height="18dp"
+                        android:background="@drawable/dw_me_sex"
+                        android:scaleType="center"
+                        android:text="中国河南"
+                        android:textSize="9sp"
+                        android:textColor="@color/white"
+                        android:layout_marginStart="10dp" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/m_f1_school"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:paddingHorizontal="8dp"
+                        android:layout_height="18dp"
+                        android:background="@drawable/dw_me_sex"
+                        android:scaleType="center"
+                        android:text="河南大学"
+                        android:textSize="9sp"
+                        android:textColor="@color/white"
+                        android:layout_marginStart="10dp" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/m_f1_profession"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:paddingHorizontal="8dp"
+                        android:layout_height="18dp"
+                        android:background="@drawable/dw_me_sex"
+                        android:scaleType="center"
+                        android:text="程序员"
+                        android:textSize="9sp"
+                        android:textColor="@color/white"
+                        android:layout_marginStart="10dp"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearLayoutCompat3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/QMUIRadiusImageView">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/u_t1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLines="3"
+                        android:text="1000w"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLines="3"
+                        android:text="关注"
+                        android:textColor="@color/color_1"
+                        android:textSize="10sp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearLayoutCompat5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/linearLayoutCompat3">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/u_t2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLines="3"
+                        android:text="1000w"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLines="3"
+                        android:text="粉丝"
+                        android:textColor="@color/color_1"
+                        android:textSize="10sp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearLayoutCompat6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/linearLayoutCompat5">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/u_t3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLines="3"
+                        android:text="1000w"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLines="3"
+                        android:text="获赞和收藏"
+                        android:textColor="@color/color_1"
+                        android:textSize="10sp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageFilterView"
+                    android:layout_width="42dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/dw_me_edit"
+                    android:scaleType="center"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/linearLayoutCompat6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/linearLayoutCompat6"
+                    app:srcCompat="@drawable/ic_me_edit" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:layout_marginEnd="14dp"
+                    android:background="@drawable/dw_me_edit"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="3"
+                    android:paddingHorizontal="14dp"
+                    android:text="编辑资料"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageFilterView"
+                    app:layout_constraintEnd_toStartOf="@+id/imageFilterView"
+                    app:layout_constraintTop_toTopOf="@+id/imageFilterView"
+                    app:layout_constraintVertical_bias="0.0" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
             <androidx.appcompat.widget.Toolbar
@@ -51,15 +342,29 @@
                         android:layout_width="match_parent"
                         android:layout_height="?actionBarSize">
 
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="?actionBarSize"
+                            android:layout_height="?actionBarSize"
+                            android:scaleType="center"
+                            app:srcCompat="@drawable/ic_me_scanning" />
+
                         <com.pikachu.utils.view.QMUIRadiusImageView
+                            android:id="@+id/m_top_img"
                             android:layout_width="24dp"
                             android:layout_height="24dp"
                             android:layout_centerInParent="true"
                             android:src="@mipmap/user_img"
                             app:qmui_border_color="@color/touch"
                             app:qmui_border_width="1dp"
-                            app:qmui_is_circle="true" />
+                            app:qmui_is_circle="true"/>
 
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="?actionBarSize"
+                            android:layout_height="?actionBarSize"
+                            android:scaleType="center"
+                            app:srcCompat="@drawable/ic_me_share"
+                            android:layout_alignParentEnd="true"/>
 
                     </RelativeLayout>
 
@@ -73,16 +378,15 @@
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/m_f1_tab1"
             android:layout_width="match_parent"
-            android:layout_height="34dp"
+            android:layout_height="36dp"
             android:background="@color/white"
             app:elevation="0dp"
             app:tabIndicatorColor="@color/touch"
             app:tabIndicatorFullWidth="false"
             app:tabIndicatorHeight="2dp"
+            app:tabMode="auto"
             app:tabSelectedTextColor="@color/touch"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="0dp" />
+            tools:ignore="MissingConstraints" />
     </com.google.android.material.appbar.AppBarLayout>
 
 

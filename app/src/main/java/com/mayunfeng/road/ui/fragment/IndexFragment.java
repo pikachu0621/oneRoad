@@ -88,6 +88,8 @@ public class IndexFragment extends BaseFragment<FragmentIndexBinding> {
     }
 
 
-
-
+    @Override
+    protected void onShow() {
+        setWindowTextBlackNow();
+    }
 }
