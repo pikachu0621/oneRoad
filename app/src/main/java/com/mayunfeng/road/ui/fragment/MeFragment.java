@@ -68,11 +68,15 @@ public class MeFragment extends BaseFragment<FragmentMeBinding> {
                     isState = true;
                     setWindowTextWhiteNow();
                     showViewAnimation(false);
+                    binding.mTopT1.setColorFilter(0xFFFFFFFF);
+                    binding.mTopT2.setColorFilter(0xFFFFFFFF);
                 }else if(state == State.COLLAPSED){
                     //折叠状态
                     isState = false;
                     setWindowTextBlackNow();
                     showViewAnimation(true);
+                    binding.mTopT1.setColorFilter(0xFF000000);
+                    binding.mTopT2.setColorFilter(0xFF000000);
                 }
             }
         });
@@ -213,9 +217,13 @@ public class MeFragment extends BaseFragment<FragmentMeBinding> {
         if (isState){
             setWindowTextWhiteNow();
             binding.mTopImg.setVisibility(View.GONE);
+            binding.mTopT1.setColorFilter(0xFFFFFFFF);
+            binding.mTopT2.setColorFilter(0xFFFFFFFF);
         }else {
             setWindowTextBlackNow();
             binding.mTopImg.setVisibility(View.VISIBLE);
+            binding.mTopT1.setColorFilter(0xFF000000);
+            binding.mTopT2.setColorFilter(0xFF000000);
         }
     }
 

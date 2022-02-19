@@ -343,6 +343,7 @@
                         android:layout_height="?actionBarSize">
 
                         <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/m_top_t1"
                             android:layout_width="?actionBarSize"
                             android:layout_height="?actionBarSize"
                             android:scaleType="center"
@@ -360,11 +361,12 @@
 
 
                         <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/m_top_t2"
                             android:layout_width="?actionBarSize"
                             android:layout_height="?actionBarSize"
+                            android:layout_alignParentEnd="true"
                             android:scaleType="center"
-                            app:srcCompat="@drawable/ic_me_share"
-                            android:layout_alignParentEnd="true"/>
+                            app:srcCompat="@drawable/ic_me_share" />
 
                     </RelativeLayout>
 
