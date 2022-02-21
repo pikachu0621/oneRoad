@@ -28,6 +28,7 @@ import com.mayunfeng.road.databinding.FragmentIndexBinding;
 import com.mayunfeng.road.databinding.FragmentListBinding;
 import com.mayunfeng.road.mode.JsonIndexMode;
 import com.mayunfeng.road.mode.JsonTabMode;
+import com.mayunfeng.road.ui.activity.LookArticleActivity;
 import com.pikachu.utils.base.BaseFragment;
 import com.pikachu.utils.utils.AssetsUtils;
 import com.pikachu.utils.utils.UiUtils;
@@ -207,6 +208,7 @@ public class ListFragment extends BaseFragment<FragmentListBinding> implements O
 
     @Override
     public boolean onClickItem(JsonIndexMode.ContentDTO itemData) {
+        startActivity(LookArticleActivity.class);
         return false;
     }
 }

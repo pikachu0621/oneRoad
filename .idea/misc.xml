@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.35" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable-xxxhdpi/ic_look_many.xml" value="0.35" />
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable-xxxhdpi/ic_main_item_video_pay.xml" value="0.35" />
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable-xxxhdpi/ic_me_boy.xml" value="0.35" />
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable-xxxhdpi/ic_me_edit.xml" value="0.35" />
@@ -27,6 +28,7 @@
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/dw_me_sex.xml" value="0.35" />
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/dw_video_mask.xml" value="0.35" />
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/gradient_dow.xml" value="0.35" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/ic_look_back.xml" value="0.35" />
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/ic_main_add_user.xml" value="0.35" />
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/ic_main_gradient_dow.xml" value="0.35" />
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/ic_main_gradient_top.xml" value="0.35" />
@@ -58,6 +60,7 @@
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/ic_msg_systeam.xml" value="0.35" />
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable/ic_video_add.xml" value="0.35" />
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/layout-v28/ui_main_item_img1.xml" value="0.317481884057971" />
+        <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/layout/activity_look_article.xml" value="0.3016304347826087" />
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/layout/fragment_index.xml" value="0.3338541666666667" />
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/layout/fragment_list.xml" value="0.25936599423631124" />

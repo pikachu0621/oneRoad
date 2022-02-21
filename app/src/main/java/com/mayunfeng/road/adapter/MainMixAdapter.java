@@ -78,6 +78,12 @@ public class MainMixAdapter extends BaseAdapter<JsonIndexMode.ContentDTO> {
       /*  binding.img35.setText(itemData.getUserName());
         binding.img31.setText(itemData.getArticleTitle());
         binding.img32.setText(itemData.getArticleContent());*/
+        // 列表点击
+        binding.getRoot().setOnClickListener(v -> {
+            if (onMainMixItemClickListener.onClickItem(itemData)) {
+                refresh();
+            }
+        });
 
         //  11
         if (itemViewType == IMG_1){
@@ -198,15 +204,6 @@ public class MainMixAdapter extends BaseAdapter<JsonIndexMode.ContentDTO> {
             return;
         }
 
-
-        // 列表点击
-        binding.getRoot().setOnClickListener(v -> {
-
-            if (onMainMixItemClickListener.onClickItem(itemData)) {
-                refresh();
-            }
-
-        });
     }
 
     /**

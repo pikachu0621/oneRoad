@@ -357,7 +357,8 @@
                             android:src="@mipmap/user_img"
                             app:qmui_border_color="@color/touch"
                             app:qmui_border_width="1dp"
-                            app:qmui_is_circle="true"/>
+                            app:qmui_is_circle="true"
+                            android:visibility="gone"/>
 
 
                         <androidx.appcompat.widget.AppCompatImageView
@@ -389,14 +390,30 @@
             app:tabMode="auto"
             app:tabSelectedTextColor="@color/touch"
             tools:ignore="MissingConstraints" />
+
     </com.google.android.material.appbar.AppBarLayout>
 
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/m_f1_pager1"
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/m_f1_pager1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:background="@drawable/dw_main_gradient_dow" />
+    </RelativeLayout>
+
+
+
+
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
