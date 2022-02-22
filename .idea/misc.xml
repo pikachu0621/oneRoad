@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android/oneRoad/app/src/main/res/layout/activity_look_article.xml" value="0.25" />
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.35" />
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable-xxxhdpi/ic_look_many.xml" value="0.35" />
         <entry key="..\:/AndroidInfo/AndroidProject/oneRoad/app/src/main/res/drawable-xxxhdpi/ic_main_item_video_pay.xml" value="0.35" />
@@ -88,7 +89,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
