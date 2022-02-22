@@ -25,7 +25,7 @@ Android 资讯类App，无其他用途
 下载apk
 ---
 >1. [Github-下载](/static/release/OneBeltOneRoad_1.0.0.apk)
->2. [国内下载](https://pkpk.run)
+>2. [国内下载](http://pkpk.run)
 
 
 效果图
