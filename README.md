@@ -30,10 +30,12 @@ Android 资讯类App，无其他用途
 
 效果图
 ==============
-|首页-type1|首页-type2|首页-type3|视频|消息|我的|
-|:---:|:---:|:---:|:---:|:---:|:---:|
-| ![](/static/a1.jpg) | ![](/static/a2.jpg) | ![](/static/a3.jpg) | ![](/static/b1.jpg) | ![](/static/c1.jpg) | ![](/static/d1.jpg) |
-
+|首页-type1|首页-type2|首页-type3|
+|:---:|:---:|:---:|
+| ![](/static/a1.jpg) | ![](/static/a2.jpg) | ![](/static/a3.jpg) | 
+|视频|消息|我的|
+|:---:|:---:|
+| ![](/static/b1.jpg) | ![](/static/c1.jpg) | ![](/static/d1.jpg) |
 
 By: Pikachu_WeChat
 <br>
