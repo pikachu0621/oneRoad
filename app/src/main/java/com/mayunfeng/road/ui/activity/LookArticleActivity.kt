@@ -3,13 +3,15 @@ package com.mayunfeng.road.ui.activity
 import android.os.Build
 import android.os.Bundle
 import android.text.Html
-import android.text.Spanned
 import android.util.TypedValue
 import androidx.constraintlayout.widget.ConstraintLayout
+import com.mayunfeng.road.adapter.LookImageDataAdapter
 import com.mayunfeng.road.base.BaseBActivity
 import com.mayunfeng.road.databinding.ActivityLookArticleBinding
+import com.mayunfeng.road.databinding.UiLookItemImgBinding
 import com.mayunfeng.road.mode.JsonIndexMode
 import com.mayunfeng.road.widget.ObservableScrollView
+import com.pikachu.utils.adapter.QuickAdapter
 import com.pikachu.utils.utils.GlideUtils
 import com.pikachu.utils.utils.TimeUtils
 import com.pikachu.utils.utils.UiUtils
@@ -39,7 +41,9 @@ class LookArticleActivity : BaseBActivity<ActivityLookArticleBinding>() {
         binding.appCompatTextView7.text = content.articleTitle
         // 内容
         binding.appCompatTextView8.text = Html.fromHtml(content.articleContent)
-
+        // 图片
+        LookImageDataAdapter.setAdapter(content.dataSource, context, binding.recyclerImg)
+        // 
     }
 
     private fun click() {

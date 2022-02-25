@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="16dp"
+    tools:ignore="MissingDefaultResource">
+
+    <com.pikachu.utils.view.QMUIRadiusImageView
+        android:id="@+id/QMUIRadiusImageView3"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@mipmap/user_img"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:qmui_is_circle="true" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/img3_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="@string/app_name"
+        android:textColor="@color/color_4"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/QMUIRadiusImageView3"
+        app:layout_constraintStart_toEndOf="@+id/QMUIRadiusImageView3"
+        app:layout_constraintTop_toTopOf="@+id/QMUIRadiusImageView3" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/img1_9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_weight="1"
+        android:text="100"
+        android:textColor="@color/color_5"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView5"
+        app:layout_constraintEnd_toStartOf="@+id/appCompatImageView5"
+        app:layout_constraintTop_toTopOf="@+id/appCompatImageView5" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView5"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/QMUIRadiusImageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/QMUIRadiusImageView3"
+        app:srcCompat="@drawable/ic_main_item_good" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView9"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="5"
+        android:text="@string/test"
+        android:textColor="@color/color_4"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/img3_5"
+        app:layout_constraintTop_toBottomOf="@+id/QMUIRadiusImageView3"
+        app:lineHeight="19dp" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/dw_look_reply"
+        android:drawableEnd="@drawable/ic_look_go"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lines="1"
+        android:paddingStart="10dp"
+        android:paddingEnd="4dp"
+        android:paddingVertical="3dp"
+        android:text="回复"
+        android:textColor="@color/color_4"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@+id/appCompatTextView9"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView9" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical="3dp"
+        android:text="3小时前"
+        android:textColor="@color/color_4"
+        android:textSize="10sp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/appCompatTextView10"
+        app:layout_constraintStart_toEndOf="@+id/appCompatTextView10"
+        app:layout_constraintTop_toTopOf="@+id/appCompatTextView10" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

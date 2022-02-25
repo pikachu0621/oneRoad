@@ -28,7 +28,6 @@
         android:padding="5dp">
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:lineHeight="26dp"
             android:id="@+id/today_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

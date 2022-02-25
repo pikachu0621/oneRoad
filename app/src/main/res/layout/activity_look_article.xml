@@ -127,7 +127,7 @@
                     android:layout_marginHorizontal="16dp"
                     android:layout_marginTop="16dp"
                     android:ellipsize="end"
-                    android:lineHeight="26dp"
+                    app:lineHeight="26dp"
                     android:maxLines="7"
                     android:text="@string/test"
                     android:textColor="@color/color_4"
@@ -206,13 +206,102 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="16dp"
                     android:layout_marginTop="16dp"
-                    android:lineHeight="26dp"
+                    app:lineHeight="26dp"
                     android:text="@string/test"
                     android:textColor="@color/color_4"
                     android:textSize="15sp"
                     tools:targetApi="p" />
 
 
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="10dp" />
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/img1_2">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        app:srcCompat="@drawable/ic_main_item_share" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/img1_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="100"
+                        android:textColor="@color/color_5"
+                        android:textSize="10sp" />
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginStart="20dp"
+                        app:srcCompat="@drawable/ic_main_item_msg" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/img1_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="100"
+                        android:textColor="@color/color_5"
+                        android:textSize="10sp" />
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginStart="20dp"
+                        app:srcCompat="@drawable/ic_main_item_good" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/img1_9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:text="100"
+                        android:textColor="@color/color_5"
+                        android:textSize="10sp" />
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img1_10"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        app:srcCompat="@drawable/ic_main_item_many" />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/color_0" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerMsg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="5dp" />
             </androidx.appcompat.widget.LinearLayoutCompat>
 
 
@@ -222,6 +311,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
 
     <View
         android:id="@+id/view3"

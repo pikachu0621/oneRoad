@@ -1,5 +1,7 @@
 package com.pikachu.utils.adapter;
 import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 
 import com.pikachu.utils.utils.ViewBindingUtils;
@@ -38,7 +40,7 @@ public abstract class QuickAdapter<V extends ViewBinding, T > extends BaseAdapte
 
 
     @Override
-    public void onBindView(ViewBinding binding, T itemData, int position, int itemViewType, List<T> data) {
+    public void onBindView(@NonNull ViewBinding binding, @NonNull T itemData, int position, int itemViewType, @NonNull List<T> data) {
         onQuickBindView((V) binding, itemData, position, data);
     }
 

@@ -68,7 +68,6 @@
 
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:lineHeight="26dp"
         android:layout_marginHorizontal="12dp"
         android:id="@+id/img3_1"
         android:layout_width="match_parent"
