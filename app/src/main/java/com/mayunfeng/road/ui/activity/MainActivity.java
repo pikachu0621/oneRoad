@@ -6,17 +6,20 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.mayunfeng.road.R;
 import com.mayunfeng.road.base.BaseBActivity;
 import com.mayunfeng.road.databinding.ActivityMainBinding;
+import com.mayunfeng.road.mode.JsonIndexMode;
 import com.mayunfeng.road.mode.MainChangeMode;
 import com.mayunfeng.road.ui.fragment.IndexFragment;
 import com.mayunfeng.road.ui.fragment.MeFragment;
 import com.mayunfeng.road.ui.fragment.MsgFragment;
 import com.mayunfeng.road.ui.fragment.VideoFragment;
+import com.mayunfeng.road.widget.ObservableScrollView;
 import com.pikachu.utils.adapter.PagerAdapter;
 import com.pikachu.utils.base.BaseActivity;
 import com.pikachu.utils.utils.GlideUtils;

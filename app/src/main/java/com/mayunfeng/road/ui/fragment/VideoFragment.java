@@ -44,6 +44,7 @@ public class VideoFragment extends BaseFragment<FragmentVideoBinding> {
     protected void onInitView(Bundle savedInstanceState, FragmentVideoBinding binding, FragmentActivity activity) {
         //状态栏
         MainActivity.setStatusBarHeight(binding.topRoot.tRootView, context);
+        setWindowTextBlackNow();
 
         // 加载Tab标题
         String s = AssetsUtils.readAssetsString(context, "video/loadVideoTab.json");

@@ -7,7 +7,7 @@
     tools:context=".ui.activity.LookArticleActivity">
 
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
@@ -17,31 +17,76 @@
 
 
         <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/appCompatImageView4"
             android:layout_width="?actionBarSize"
             android:layout_height="match_parent"
             android:scaleType="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_look_back" />
 
+        <!--app:qmui_border_color="@color/touch"
+        app:qmui_border_width="1dp"-->
         <com.pikachu.utils.view.QMUIRadiusImageView
             android:id="@+id/tty"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_centerInParent="true"
             android:src="@mipmap/user_img"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:qmui_is_circle="true" />
 
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tty1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:alpha="0"
+            android:ellipsize="end"
+            android:maxLength="10"
+            android:maxLines="1"
+            android:text="日出东方催人醒"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tty"
+            app:layout_constraintStart_toEndOf="@+id/tty"
+            app:layout_constraintTop_toTopOf="@+id/tty" />
 
-
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tty2"
+            android:layout_width="50dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="6dp"
+            android:alpha="0"
+            android:background="@drawable/dw_look_add_user"
+            android:gravity="center"
+            android:lines="1"
+            android:text="@string/main_s1"
+            android:textColor="@color/touch"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/appCompatImageView3"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
         <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/appCompatImageView3"
             android:layout_width="?actionBarSize"
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
             android:scaleType="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_look_many" />
 
-    </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <com.scwang.smart.refresh.layout.SmartRefreshLayout
@@ -51,33 +96,132 @@
         android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/view3"
-        app:srlEnableLoadMore="false"
-        app:srlEnableRefresh="false"
+        app:layout_constraintVertical_bias="1.0"
+        app:srlEnableLoadMore="true"
+        app:srlEnableOverScrollBounce="true"
         app:srlEnableOverScrollDrag="true"
-        app:srlEnableOverScrollBounce="true">
+        app:srlEnableRefresh="true">
 
-        <ScrollView
-            android:id="@+id/look_rt"
-            android:overScrollMode="never"
+        <com.mayunfeng.road.widget.LoadHeader
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content" />
+
+        <com.mayunfeng.road.widget.ObservableScrollView
+            android:id="@+id/look_rt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never">
+
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-                <TextView
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView7"
                     android:layout_width="wrap_content"
-                    android:layout_height="2000dp"
-                    android:text="12\n12\n12\n12\n12\n12\n12\n12\n12\n12\n12\n12\n12\n12\n12\n12\n12\n12\n12\n12\n12\n12\n12\n12\n12\n"/>
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:ellipsize="end"
+                    android:lineHeight="26dp"
+                    android:maxLines="7"
+                    android:text="@string/test"
+                    android:textColor="@color/color_4"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp">
+
+                    <com.pikachu.utils.view.QMUIRadiusImageView
+                        android:id="@+id/QMUIRadiusImageView2"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@mipmap/user_img"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:qmui_is_circle="true" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/appCompatTextView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="2dp"
+                        android:ellipsize="end"
+                        android:maxLength="10"
+                        android:maxLines="1"
+                        android:text="日出东方催人醒"
+                        android:textColor="@color/color_4"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toEndOf="@+id/QMUIRadiusImageView2"
+                        app:layout_constraintTop_toTopOf="@+id/QMUIRadiusImageView2" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/appCompatTextView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="2dp"
+                        android:ellipsize="end"
+                        android:maxLength="10"
+                        android:maxLines="1"
+                        android:text="2022/02/22"
+                        android:textColor="@color/color_7"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/QMUIRadiusImageView2"
+                        app:layout_constraintStart_toEndOf="@+id/QMUIRadiusImageView2" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/img3_6"
+                        android:layout_width="64dp"
+                        android:layout_height="26dp"
+                        android:background="@drawable/dw_look_add_user"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:text="@string/main_s1"
+                        android:textColor="@color/touch"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:lineHeight="26dp"
+                    android:text="@string/test"
+                    android:textColor="@color/color_4"
+                    android:textSize="15sp"
+                    tools:targetApi="p" />
 
 
             </androidx.appcompat.widget.LinearLayoutCompat>
-        </ScrollView>
-    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
 
+
+        </com.mayunfeng.road.widget.ObservableScrollView>
+
+        <com.scwang.smart.refresh.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
 
     <View
         android:id="@+id/view3"

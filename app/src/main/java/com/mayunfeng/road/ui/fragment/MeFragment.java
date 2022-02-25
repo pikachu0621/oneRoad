@@ -66,7 +66,7 @@ public class MeFragment extends BaseFragment<FragmentMeBinding> {
                 if( state == State.EXPANDED ) {
                     //展开状态
                     isState = true;
-                    setWindowTextWhiteNow();
+                    setWindowTextWhiteNowOntNar();
                     showViewAnimation(false);
                     binding.mTopT1.setColorFilter(0xFFFFFFFF);
                     binding.mTopT2.setColorFilter(0xFFFFFFFF);
@@ -215,7 +215,7 @@ public class MeFragment extends BaseFragment<FragmentMeBinding> {
     @Override
     protected void onShow() {
         if (isState){
-            setWindowTextWhiteNow();
+            setWindowTextWhiteNowOntNar();
             binding.mTopImg.setVisibility(View.GONE);
             binding.mTopT1.setColorFilter(0xFFFFFFFF);
             binding.mTopT2.setColorFilter(0xFFFFFFFF);

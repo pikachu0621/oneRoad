@@ -1,6 +1,7 @@
 package com.mayunfeng.road.adapter;
 
 import android.annotation.SuppressLint;
+import android.text.Html;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
@@ -92,7 +93,7 @@ public class MainMixAdapter extends BaseAdapter<JsonIndexMode.ContentDTO> {
             GlideUtils.with(context).load(itemData.getUserImage()).transition(200).into(bind.img14); // 用户头像
             bind.img15.setText(itemData.getUserName()); // 用户昵称
             bind.img11.setText(itemData.getArticleTitle()); // 文章标题
-            bind.img12.setText(itemData.getArticleContent()); // 文章内容
+            bind.img12.setText(Html.fromHtml(itemData.getArticleContent()).toString()); // 文章内容
 
             bind.img17.setText(itemData.getArticleShareNum() + ""); // 分享数
             bind.img18.setText(itemData.getArticleCommentNum() + ""); //  评论数
@@ -111,7 +112,7 @@ public class MainMixAdapter extends BaseAdapter<JsonIndexMode.ContentDTO> {
             GlideUtils.with(context).load(itemData.getUserImage()).transition(200).into(bind.img34); // 用户头像
             bind.img35.setText(itemData.getUserName());
             bind.img31.setText(itemData.getArticleTitle());
-            bind.img32.setText(itemData.getArticleContent());
+            bind.img32.setText(Html.fromHtml(itemData.getArticleContent()).toString());
 
             bind.img37.setText(itemData.getArticleShareNum() + ""); // 分享数
             bind.img38.setText(itemData.getArticleCommentNum() + ""); //  评论数
@@ -189,8 +190,6 @@ public class MainMixAdapter extends BaseAdapter<JsonIndexMode.ContentDTO> {
 
 
 
-
-
         if (itemViewType == TODAY){
             UiMainItemTodayBinding bind = (UiMainItemTodayBinding) binding;
 
@@ -200,8 +199,6 @@ public class MainMixAdapter extends BaseAdapter<JsonIndexMode.ContentDTO> {
 
             JsonIndexMode.ContentDTO.DataSourceDTO dataSourceDTO = itemData.getDataSource().get(0);
             GlideUtils.with(context).load(dataSourceDTO.getImgUrl()).transition(200).into(bind.today1);
-
-            return;
         }
 
     }

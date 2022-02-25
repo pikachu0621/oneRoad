@@ -43,7 +43,7 @@ public class MsgFragment extends BaseFragment<FragmentMsgBinding> {
     protected void onInitView(Bundle savedInstanceState, FragmentMsgBinding binding, FragmentActivity activity) {
         //状态栏
         MainActivity.setStatusBarHeight(binding.topRoot.tRootView, context);
-
+       setWindowTextBlackNow();
 
 
     }

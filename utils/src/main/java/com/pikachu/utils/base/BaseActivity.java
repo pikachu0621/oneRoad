@@ -133,6 +133,7 @@ public abstract class BaseActivity<T extends ViewBinding> extends AppCompatActiv
         ImmersionBar.with(this)
                 .barColor(android.R.color.white)
                 .statusBarDarkFont(true)  // 状态栏字体深色或亮色   true 深色
+                .navigationBarDarkIcon(true)  // 状态栏字体深色或亮色   true 深色
                 .fitsSystemWindows(true) // 解决布局与状态栏重叠问题
                 .init();
 
@@ -161,6 +162,7 @@ public abstract class BaseActivity<T extends ViewBinding> extends AppCompatActiv
         ImmersionBar.with(this)
                 .barColor(android.R.color.black)
                 .statusBarDarkFont(false) //  true 深色
+                .navigationBarDarkIcon(false)  // 状态栏字体深色或亮色   true 深色
                 .fitsSystemWindows(true)
                 .init();
     }
@@ -229,6 +231,7 @@ public abstract class BaseActivity<T extends ViewBinding> extends AppCompatActiv
         ImmersionBar.with(this)
                 .navigationBarColor(navColor)
                 .statusBarDarkFont(barDark) //  true 深色
+                .navigationBarDarkIcon(barDark)
                 .fitsSystemWindows(false)
                 .init();
     }

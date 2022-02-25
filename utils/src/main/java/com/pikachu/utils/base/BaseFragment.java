@@ -361,8 +361,20 @@ public abstract class BaseFragment<T extends ViewBinding> extends Fragment {
         ImmersionBar.with(this)
                 .statusBarDarkFont(true) //  true 深色
                 .navigationBarDarkIcon(true)
+                .navigationBarColor(android.R.color.white)
                 .init();
     }
+
+    //设置 状态栏字体 为白色
+    protected void setWindowTextWhiteNowOntNar() {
+        ImmersionBar.with(this)
+                .statusBarDarkFont(false)
+                .navigationBarDarkIcon(true)
+                .navigationBarColor(android.R.color.white)
+                //.fitsSystemWindows(false)
+                .init();
+    }
+
 
     //设置 状态栏字体 导航栏图标 为白色
     protected void setWindowTextWhiteNow() {

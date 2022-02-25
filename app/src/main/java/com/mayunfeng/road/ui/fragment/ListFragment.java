@@ -208,7 +208,7 @@ public class ListFragment extends BaseFragment<FragmentListBinding> implements O
 
     @Override
     public boolean onClickItem(JsonIndexMode.ContentDTO itemData) {
-        startActivity(LookArticleActivity.class);
+        startActivity(LookArticleActivity.class, itemData);
         return false;
     }
 }
