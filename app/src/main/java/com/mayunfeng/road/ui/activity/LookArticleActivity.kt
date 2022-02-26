@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.text.Html
 import android.util.TypedValue
 import androidx.constraintlayout.widget.ConstraintLayout
+import com.mayunfeng.road.adapter.LookCommentAdapter
 import com.mayunfeng.road.adapter.LookImageDataAdapter
 import com.mayunfeng.road.base.BaseBActivity
 import com.mayunfeng.road.databinding.ActivityLookArticleBinding
@@ -43,7 +44,8 @@ class LookArticleActivity : BaseBActivity<ActivityLookArticleBinding>() {
         binding.appCompatTextView8.text = Html.fromHtml(content.articleContent)
         // 图片
         LookImageDataAdapter.setAdapter(content.dataSource, context, binding.recyclerImg)
-        // 
+        // 评论
+        LookCommentAdapter.setAdapter(context, content.articleId, binding.recyclerMsg)
     }
 
     private fun click() {
