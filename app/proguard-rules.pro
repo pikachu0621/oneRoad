@@ -19,9 +19,9 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
--keep class  com.mayunfeng.road.databinding.* {*;}
+-keep class  com.pkpk.road.databinding.* {*;}
 
--keep class com.mayunfeng.road.mode.* {*;}
+-keep class com.pkpk.road.mode.* {*;}
 
 
 -keep public class cn.jzvd.JZMediaSystem {*; }

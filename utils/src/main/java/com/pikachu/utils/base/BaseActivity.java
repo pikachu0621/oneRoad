@@ -1,5 +1,6 @@
 package com.pikachu.utils.base;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -385,7 +386,7 @@ public abstract class BaseActivity<T extends ViewBinding> extends AppCompatActiv
      *           继承Serializable的对象
      *           可以是 Integer(int)   Float(float)  String  和自定义的
      */
-    public <P extends Serializable> void startActivityForResult(Class<?> clz, ActivityResult<P> callback){
+    public <P extends Serializable> void    startActivityForResult(Class<? extends Activity> clz, ActivityResult<P> callback){
         ActivityResultLauncher<Intent> intentActivityResultLauncher =
                 registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
                         result -> {
@@ -397,7 +398,7 @@ public abstract class BaseActivity<T extends ViewBinding> extends AppCompatActiv
                             P o = null;
                             if (serializableExtra != null){
                                 try {
-                                    o = ((P) serializableExtra);
+                                    o = (P) serializableExtra;
                                 }catch (Exception exception){
                                     exception.printStackTrace();
                                 }

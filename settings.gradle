@@ -1,9 +1,13 @@
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
-        google()
-        mavenCentral()
-        jcenter() // Warning: this repository is going to shut down soon
+        // google()
+        // mavenCentral()
+        // jcenter() // Warning: this repository is going to shut down soon
+        gradlePluginPortal()
+        maven { url 'https://maven.aliyun.com/repository/google'}
+        maven { url 'https://maven.aliyun.com/repository/public'}
+        maven { url 'https://jitpack.io' }
     }
 }
 rootProject.name = "一带一路"
